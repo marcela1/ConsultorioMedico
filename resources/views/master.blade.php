@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<title>Principal</title>
 
-	<script src="{{asset("js/jquery.js")}}"></script>
+	<script src="{{asset("js/jquery-2.0.0.min.js")}}"></script>
 	<link rel="stylesheet" href="{{ asset("css/bootstrap.css")}}">
 
 </head>
@@ -24,7 +24,7 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="{{url('usuarios')}}">Usuarios <span class="sr-only">(current)</span></a></li>
+        <li class="active"><a href="{{url('/administrador')}}">Registrar <span class="sr-only">(current)</span></a></li>
         <li><a href="{{url('/asignarusuarios')}}">Asignar Usuarios</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Opciones <span class="caret"></span></a>
