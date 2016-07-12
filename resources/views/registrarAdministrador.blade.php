@@ -11,42 +11,42 @@
 					
 					<div class="form-group">
 						<label for="nombre">Nombre</label>
-						<input type="text" class="form-control" name="nombre">
+						<input type="text" class="form-control" name="nombre" value="{{old('nombre')}}">
 
 					</div>
 					<div class="form-group">
-						<label for="apellidop">Apellido Paterno</label>
-						<input type="text" class="form-control" name="apellidop">
+						<label for="apellido_paterno">Apellido Paterno</label>
+						<input type="text" class="form-control" name="apellido_paterno" value="{{old('apellido_paterno')}}">
 
 					</div>
 					<div class="form-group">
-						<label for="apellidom">Apellido Materno</label>
-						<input type="text" class="form-control" name="apellidom">
+						<label for="apellido_materno">Apellido Materno</label>
+						<input type="text" class="form-control" name="apellido_materno" value="{{old('apellido_materno')}}">
 
 					</div>
 					<div class="form-group">
 						<label for="especialidad">Especialidad</label>
-						<input type="text" class="form-control" name="especialidad">
+						<input type="text" class="form-control" name="especialidad" value="{{old('especialidad')}}">
 
 					</div>
 					<div class="form-group">
-						<label for="cedulaprofesional">Cedula Profesional</label>
-						<input type="text" class="form-control" name="cedulaprofesional">
+						<label for="cedula">Cedula Profesional</label>
+						<input type="text" class="form-control" name="cedula" value="{{old('cedula')}}">
 
 					</div>
 					<div class="form-group">
 						<label for="usuario">Usuario</label>
-						<input type="text" class="form-control" name="usuario">
+						<input type="text" class="form-control" name="usuario" value="{{old('usuario')}}">
 
 					</div>
 					<div class="form-group">
 						<label for="contraseña">Contraseña</label>
-						<input type="text" class="form-control" name="contraseña">
+						<input type="text" class="form-control" name="contraseña" >
 
 					</div>
 						<div class="form-group">
-						<label for="contraseña">Confirmar Contraseña</label>
-						<input type="text" class="form-control" name="contraseña">
+						<label for="contraseña_confirmation">Confirmar Contraseña</label>
+						<input type="text" class="form-control" name="contraseña_confirmation">
 						</div>
 						</div>
 
@@ -57,27 +57,27 @@
 				
 						<div class="form-group">
 						<label for="direccion">Direccion</label>
-						<input type="text" class="form-control" name="direccion">
+						<input type="text" class="form-control" name="direccion" value="{{old('direccion')}}">
 
 					</div>
 						<div class="form-group">
 						<label for="estado">Estado</label>
-						<input type="text" class="form-control" name="estado">
+						<input type="text" class="form-control" name="estado" value="{{old('estado')}}">
 
 					</div>
 						<div class="form-group">
 						<label for="telefono">Telefono</label>
-						<input type="text" class="form-control" name="telefono">
+						<input type="text" class="form-control" name="telefono" value="{{old('telefono')}}">
 
 					</div>
 						<div class="form-group">
 						<label for="celular">Celular</label>
-						<input type="text" class="form-control" name="celular">
+						<input type="text" class="form-control" name="celular" value="{{old('celular')}}">
 
 					</div>
 						<div class="form-group">
 						<label for="correo">Correo</label>
-						<input type="text" class="form-control" name="correo">
+						<input type="text" class="form-control" name="correo" value="{{old('correo')}}">
 
 					</div>
 					<input type="submit" class="btn btn-primary">

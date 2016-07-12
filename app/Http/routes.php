@@ -14,4 +14,5 @@
 Route::get('/', function () {
     return view('master');
 });
-Route::get('/administrador', 'administrador@registrarAdministrador');
+Route::get('/administrador', 'administradorController@registrarAdministrador');
+Route::post('/guardarAdministrador', 'administradorController@guardarAdministrador');

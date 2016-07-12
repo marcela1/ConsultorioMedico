@@ -7,13 +7,14 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use DB;
 use App\Administrador;
-class administrador extends Controller
+use App\Http\Requests\AdministradorRequest;
+class administradorController extends Controller
 {
     public function registrarAdministrador(){
 		return view('registrarAdministrador');
 	}
 
-	public function guardarAdministrador(Request $request){
+	public function guardarAdministrador(AdministradorRequest $request){
 	
 		//dd($request);
 		$administrador= new Administrador();
