@@ -7,11 +7,23 @@
 <div class="col-xs-6  " >
 				<form action="{{url('/guardarAdministrador')}}" method="POST">
 					<input type="hidden" name="_token" value="{{csrf_token() }}">
-				
+					<!-- 
+
+				@if(count($errors) > 0)
+					<div class="errors">
+					<ul>
+					@foreach($errors->all() as $error)
+					<li>{{ $error }}</li>
+				@endforeach
+					</ul>
+					</div>
+				@endif
+				-->
+
 					
 					<div class="form-group">
-						<label for="nombre">Nombre</label>
-						<input type="text" class="form-control" name="nombre" value="{{old('nombre')}}">
+						<label for="nombre"> Nombre </label>
+						 <input type="text" class="form-control" name="nombre" value="{{old('nombre')}}">
 
 					</div>
 					<div class="form-group">
@@ -37,16 +49,31 @@
 					<div class="form-group">
 						<label for="usuario">Usuario</label>
 						<input type="text" class="form-control" name="usuario" value="{{old('usuario')}}">
-
+						 @if( $errors->has('usuario') )
+             				 @foreach($errors->get('usuario') as $error )
+                 				 <br />* {{ $error }}
+            				  @endforeach
+         				 @endif
 					</div>
 					<div class="form-group">
 						<label for="contraseña">Contraseña</label>
 						<input type="text" class="form-control" name="contraseña" >
+						 @if( $errors->has('contraseña') )
+             				 @foreach($errors->get('contraseña') as $error )
+                 				 <br />* {{ $error }}
+            				  @endforeach
+         				 @endif
 
 					</div>
 						<div class="form-group">
 						<label for="contraseña_confirmation">Confirmar Contraseña</label>
 						<input type="text" class="form-control" name="contraseña_confirmation">
+						 @if( $errors->has('contraseña_confirmation') )
+             				 @foreach($errors->get('contraseña_confirmation') as $error )
+                 				 <br />* {{ $error }}
+            				  @endforeach
+         				 @endif
+
 						</div>
 						</div>
 
@@ -78,7 +105,11 @@
 						<div class="form-group">
 						<label for="correo">Correo</label>
 						<input type="text" class="form-control" name="correo" value="{{old('correo')}}">
-
+						 @if( $errors->has('correo') )
+             				 @foreach($errors->get('correo') as $error )
+                 				 <br />* {{ $error }}
+            				  @endforeach
+         				 @endif
 					</div>
 					<input type="submit" class="btn btn-primary">
 					<a href="{{url('/')}}" class="btn btn-danger"> Cancelar</a>
