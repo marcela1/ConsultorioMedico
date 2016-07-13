@@ -25,7 +25,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
       <ul class="nav navbar-nav">
         <li class="active"><a href="{{url('/administrador')}}">Registrar <span class="sr-only">(current)</span></a></li>
-        <li><a href="{{url('/asignarusuarios')}}">Asignar Usuarios</a></li>
+        <li><a href="{{url('/cita')}}">Registrar Cita</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Opciones <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">

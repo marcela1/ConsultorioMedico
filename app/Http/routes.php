@@ -16,3 +16,6 @@ Route::get('/', function () {
 });
 Route::get('/administrador', 'administradorController@registrarAdministrador');
 Route::post('/guardarAdministrador', 'administradorController@guardarAdministrador');
+
+Route::get('/cita', 'citaController@registrarCita');
+Route::post('/guardarCita', 'citaController@guardarCita');
