@@ -12,6 +12,58 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+* {
+  margin:0;
+  padding:0;
+}
+ 
+body {
+  background:#f2f2f2;
+}
+ 
+.main {
+  width:90%;
+  max-width:9000px;
+  margin:20px auto;
+}
+ 
+.slides {
+  width:100%;
+}
+ 
+.slides img {
+  width:50%;
+}
+.slidesjs-pagination{
+  background: #B9D2E1;
+  list-style:none;
+  overflow: hidden;
+}
+.slidesjs-pagination li{
+  float:left;
+}
+.slidesjs-pagination li a{
+  display:block;
+  padding:10px 20px;
+  color:#fff;
+  text-decoration: none;
+}
+.slidesjs-pagination li a:hover{
+  background:#AAADAE;
+
+}
+.slides .active{
+  background:#AAADAE;
+}
+.slidesjs-navigation{
+    background:#AAADAE;
+    color:#fff;
+    text-decoration:one;
+    display: inline-block;
+    padding:21px 20px;
+    float:right;
+}
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
