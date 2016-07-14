@@ -28,3 +28,4 @@ Route::get('/eliminarPaciente/{id}','ConsultorioController@eliminarPaciente');
 Route::get('/editarPaciente/{id}','ConsultorioController@editarPaciente');
 
 Route::post('/actualizarPaciente/{id}', 'ConsultorioController@actualizarPaciente');
+
