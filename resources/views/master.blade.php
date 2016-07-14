@@ -7,6 +7,13 @@
 
 	<script src="{{asset("js/jquery-2.0.0.min.js")}}"></script>
 	<link rel="stylesheet" href="{{ asset("css/bootstrap.css")}}">
+     <!-- Datepicker Files -->
+    <link rel="stylesheet" href="{{asset('datePicker/css/bootstrap-datepicker3.css')}}">
+    <link rel="stylesheet" href="{{asset('datePicker/css/bootstrap-standalone.css')}}">
+    <script src="{{asset('datePicker/js/bootstrap-datepicker.js')}}"></script>
+    <!-- Languaje -->
+    <script src="{{asset('datePicker/locales/bootstrap-datepicker.es.min.js')}}"></script>
+ 
 
 </head>
 <body>
@@ -29,7 +36,7 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Opciones <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="{{url('/consultarproyectos')}}">Proyectos</a></li>
+            <li><a href="{{url('/mostrarCita')}}">Modificar Citas</a></li>
             <li><a href="{{url('/asignarrequisitos')}}">Requisitos</a></li>
             <li><a href="{{url('/consultarclientes')}}">Clientes</a></li>
             <li class="divider"></li>
@@ -65,6 +72,7 @@
   </div>
 </footer>
 </div>
+<script src="js/jquery-2.0.0.min.js"></script>   
 <script src="{{asset("js/bootstrap.js")}}"></script>
 </body>
 </html>

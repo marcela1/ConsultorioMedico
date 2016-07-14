@@ -27,7 +27,7 @@ class CitaRequest extends Request
             'id_paciente' => 'required',
             'id_administrador' => 'required',
             'descripcion' => 'required',
-            'fecha' => 'required|date_format:y/m/d',
+            'hora' => 'required',
             'hora' => 'required',       
             'consultorio' => 'required',    
              ];
