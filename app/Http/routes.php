@@ -16,7 +16,6 @@ Route::get('/ ', function () {
 });
 
 
-
 Route::get('/consultarPacientes','ConsultorioController@consultarPacientes');
 
 Route::get('/registrarPaciente', 'ConsultorioController@registrarPaciente');
