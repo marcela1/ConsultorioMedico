@@ -46,9 +46,62 @@
 							}
 							?>	
 					</div>
+				
 					<div class="form-group, col-xs-12">
 						<label for="EstadoCivil">Estado Civil</label>
-						<input type="text" class="form-control" value="{{$pacientes->estado_civil}}" name="EstadoCivil">
+							<?php
+
+							if($pacientes->estado_civil == "Soltero")
+							{
+							?>
+							<input type="radio" name="EstadoCivil" checked="true" value="Soltero">Soltero
+							<input type="radio" name="EstadoCivil" value="Casado">Casado
+							<input type="radio" name="EstadoCivil" value="Union Libre">Union Libre
+							<input type="radio" name="EstadoCivil" value="Viudo">Viudo
+							<input type="radio" name="EstadoCivil" value="Otro">Otro
+							<?php
+							}
+							if($pacientes->estado_civil == "Casado")
+							{
+							?>
+							<input type="radio" name="EstadoCivil"  value="Soltero">Soltero
+							<input type="radio" name="EstadoCivil" checked="true" value="Casado">Casado
+							<input type="radio" name="EstadoCivil" value="Union Libre">Union Libre
+							<input type="radio" name="EstadoCivil" value="Viudo">Viudo
+							<input type="radio" name="EstadoCivil" value="Otro">Otro
+							<?php
+							}
+							if($pacientes->estado_civil == "Union Libre")
+							{
+							?>
+							<input type="radio" name="EstadoCivil"  value="Soltero">Soltero
+							<input type="radio" name="EstadoCivil" value="Casado">Casado
+							<input type="radio" name="EstadoCivil" checked="true"  value="Union Libre">Union Libre
+							<input type="radio" name="EstadoCivil" value="Viudo">Viudo
+							<input type="radio" name="EstadoCivil" value="Otro">Otro
+							<?php
+							}
+							if($pacientes->estado_civil == "Viudo")
+							{
+							?>
+							<input type="radio" name="EstadoCivil"  value="Soltero">Soltero
+							<input type="radio" name="EstadoCivil" value="Casado">Casado
+							<input type="radio" name="EstadoCivil"  value="Union Libre">Union Libre
+							<input type="radio" name="EstadoCivil" checked="true"  value="Viudo">Viudo
+							<input type="radio" name="EstadoCivil" value="Otro">Otro
+							<?php
+							}
+							if($pacientes->estado_civil == "Otro")
+							{
+							?>
+							<input type="radio" name="EstadoCivil"  value="Soltero">Soltero
+							<input type="radio" name="EstadoCivil" value="Casado">Casado
+							<input type="radio" name="EstadoCivil"  value="Union Libre">Union Libre
+							<input type="radio" name="EstadoCivil"  value="Viudo">Viudo
+							<input type="radio" name="EstadoCivil" checked="true"  value="Otro">Otro
+							<?php
+							}		
+							?>	
 					</div>
 					<div class="form-group, col-xs-6">
 						<label for="LugarNacimiento">Lugar de Nacimiento</label>
@@ -62,10 +115,7 @@
 						<label for="TipoSangre">Tipo de Sangre</label>
 						<input type="text" class="form-control" value="{{$pacientes->tipo_sangre}}" name="TipoSangre">
 					</div>
-					<div class="form-group, col-xs-6">
-						<label for="Seguro">Cuenta con seguro medico</label>
-						<input type="text" class="form-control" value="{{$pacientes->seguro_medico}}" name="Seguro">
-					</div>
+					
 					<div class="form-group, col-xs-6">
 						<label for="SeguroMedico">Nombre del seguro medico</label>
 						<input type="text" class="form-control" value="{{$pacientes->seguro_medico}}" name="SeguroMedico">

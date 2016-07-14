@@ -66,7 +66,6 @@ class ConsultorioController extends Controller
  }
   public function actualizarPaciente(Request $request,$id){
       $pacientes = Paciente::find($id);
-      dd($id);
       $pacientes ->fecha_registro = $request->input('FechaRegistro');
       $pacientes ->nombre= $request -> input('Nombre');
       $pacientes ->apellido_paterno = $request->input('ApellidoPat');

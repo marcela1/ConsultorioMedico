@@ -7,7 +7,9 @@
 					<input type="hidden" name="_token" value="{{csrf_token()}}">
 					<div class="form-group, col-xs-12">
 						<label for="FechaRegistro">Fecha de Registro</label>
+						
 						<input type="text" class="form-control" name="FechaRegistro">
+						<label for="FechaRegistro">Ejemplo: 2016-01-15</label><br>
 					<br></div>
 					<div class="form-group, col-xs-4" >
 						<label for="Nombre">Nombre</label>
@@ -33,8 +35,12 @@
 					<br><br></div>
 					<div class="form-group, col-xs-12">
 						<label for="EstadoCivil">Estado Civil</label>
-						<input type="text" class="form-control" name="EstadoCivil">
-					<br></div>
+						<input type="radio" name="EstadoCivil" value="Soltero">Soltero
+						<input type="radio" name="EstadoCivil" value="Casado">Casado
+						<input type="radio" name="EstadoCivil" value="Union Libre">Union Libre
+						<input type="radio" name="EstadoCivil" value="Viudo">Viudo
+						<input type="radio" name="EstadoCivil" value="Otro">Otro
+					<br><br></div>
 					<div class="form-group, col-xs-6">
 						<label for="LugarNacimiento">Lugar de Nacimiento</label>
 						<input type="text" class="form-control" name="LugarNacimiento">

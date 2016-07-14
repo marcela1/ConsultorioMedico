@@ -15,7 +15,6 @@ Route::get('/ ', function () {
     return view('principal');
 });
 
-<<<<<<< HEAD
 
 Route::get('/consultarPacientes','ConsultorioController@consultarPacientes');
 
@@ -28,5 +27,4 @@ Route::get('/eliminarPaciente/{id}','ConsultorioController@eliminarPaciente');
 Route::get('/editarPaciente/{id}','ConsultorioController@editarPaciente');
 
 Route::post('/actualizarPaciente/{id}', 'ConsultorioController@actualizarPaciente');
-=======
->>>>>>> origin/master
+
