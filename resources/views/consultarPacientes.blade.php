@@ -4,11 +4,11 @@
 @stop
 @section('contenido')
 
-				<a href="{{url('/registrarPaciente')}}" class="btn btn-success">Nuevo Paciente
+				<a href="{{url('/registrarPaciente')}}"  class="btn btn-primary">Nuevo Paciente
 				<span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>
 						<table class="table table-hover">
 							<thead>
-								<tr>
+								<tr class="active">
 									<th>ID</th>
 									<th>Nombre</th>
 									<th>Apellido Paterno</th>
@@ -26,9 +26,11 @@
 								<td>{{$p->apellido_paterno}}</td>
 								<td>{{$p->apellido_materno}}</td>
 
-								<td><a href="{{url('/eliminarPaciente')}}/{{$p->id}}"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a></td>
-								<td><a class"btn btn-primary btn-xs" href="{{url('/editarPaciente')}}/{{$p->id}}" ><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a></td>
+								<td><a href="{{url('/eliminarPaciente')}}/{{$p->id}}" class="btn btn-danger">Eliminar
+				<span class="" aria-hidden= "true"></span></a>
+								<td><a href="{{url('/editarPaciente')}}/{{$p->id}}" class="btn btn-primary">Editar<span class="" aria-hidden= "true"></span></a>
 							</tr>
+
 							@endforeach
 						</tbody>
 					    </table>

@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
 
-	<meta charset="UTF-8">
-	<title>Principal</title>
+  <meta charset="UTF-8">
+  <title>Principal</title>
 
-	<script src="{{asset("js/jquery.js")}}"></script>
-	<link rel="stylesheet" href="{{ asset("css/bootstrap.css")}}">
+  <script src="{{asset("js/jquery.js")}}"></script>
+  <link rel="stylesheet" href="{{ asset("css/bootstrap.css")}}">
 
 </head>
-<body>
+
+
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -19,12 +20,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Consultorio Medico</a>
+      <a class="navbar-brand" href="{{url('/')}}">Consultorio Medico</a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Paciente<span class="sr-only">(current)</span></a></li>
+        <li class="active"><a href="{{url('consultarPacientes')}}">Paciente<span class="sr-only">(current)</span></a></li>
         <li><a href="#">Administrador</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Iniciar Sension<span class="caret"></span></a>
@@ -51,6 +52,10 @@
     </div>
   </div>
 </nav>
+
+    </div>
+  </header>  
+<section class="contenido wrapper">
 <div class="container">
 	<div class="row">
 		<div class="col-xs-12">
@@ -61,10 +66,12 @@
 	</div>	
 <footer class="row">
   <div class="col-xs-12 well text-center">
-    <small>ITC Ingeniería Web &copy; 2016</small>
+    <small>Consultorio Medico &copy; 2016</small>
   </div>
 </footer>
 </div>
 <script src="{{asset("js/bootstrap.js")}}"></script>
+</section>
+
 </body>
 </html>
