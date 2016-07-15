@@ -1,8 +1,8 @@
 @extends('master')
 @section('encabezado')
-<link rel="stylesheet" href="bootstrap.css">
-<link rel="stylesheet" href="fonts.css">
-
+ <link rel="stylesheet" href="bootstrap.css">
+ <link rel="stylesheet" href="fonts.css">
+  
 @section('contenido')
 
 <div class="jumbotron" style="background: #ecf0f1">

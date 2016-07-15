@@ -11,6 +11,22 @@
 |
 */
 
+
+
+Route::get('/administrador', 'administradorController@registrarAdministrador');
+Route::post('/guardarAdministrador', 'administradorController@guardarAdministrador');
+
+Route::get('/cita', 'citaController@registrarCita');
+Route::post('/guardarCita', ['as' => 'save-date',
+                           'uses' => 'citaController@guardarCita', 
+                            function () {
+                                return '';
+                            }]);
+Route::get('/mostrarCita', 'citaController@mostrarCita');
+Route::get('/eliminarCita/{id}', 'citaController@eliminarCita');
+Route::get('/modificarCita/{id}','citaController@modificarCita');
+Route::post('/actualizarCita/{id}','citaController@actualizarCita');
+
 Route::get('/ ', function () {
     return view('principal');
 });
@@ -28,3 +44,10 @@ Route::get('/editarPaciente/{id}','ConsultorioController@editarPaciente');
 
 Route::post('/actualizarPaciente/{id}', 'ConsultorioController@actualizarPaciente');
 
+
+
+/*Llamadas al controlador Auth*/
+//Route::get('login', 'AuthController@authenticate'); // Mostrar login
+//Route::post('login', 'AuthController@postLogin'); // Verificar datos
+//Route::get('logout', 'AuthController@logOut'); // Finalizar sesión
+ 
