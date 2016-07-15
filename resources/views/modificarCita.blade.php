@@ -62,7 +62,7 @@
 					</div>
 					
 					<input type="submit" class="btn btn-primary">
-					<a href="{{url('/mostrarCita')}}" class="btn btn-danger"> Cancelar</a>
+					<a href="{{url('/mostrarCita')}}" class="btn btn-default"> Cancelar</a>
 						</div>
 
 					

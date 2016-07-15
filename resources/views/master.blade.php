@@ -5,19 +5,19 @@
   <meta charset="UTF-8">
   <title>Principal</title>
 
-	
-	<link rel="stylesheet" href="{{ asset("css/bootstrap.css")}}">
-     <!-- Datepicker Files -->
+	  <link rel="stylesheet" href="{{ asset("js/jquery.js") }}">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
+
+   
+ 
+    <script src="//code.jquery.com/jquery-2.0.0.min.js"></script>
+    <!-- Datepicker Files -->
     <link rel="stylesheet" href="{{asset('datePicker/css/bootstrap-datepicker3.css')}}">
     <link rel="stylesheet" href="{{asset('datePicker/css/bootstrap-standalone.css')}}">
     <script src="{{asset('datePicker/js/bootstrap-datepicker.js')}}"></script>
     <!-- Languaje -->
     <script src="{{asset('datePicker/locales/bootstrap-datepicker.es.min.js')}}"></script>
  
-
-  <script src="{{asset("js/jquery.js")}}"></script>
-  <link rel="stylesheet" href="{{ asset("css/bootstrap.css")}}">
-
 
 </head>
 
@@ -40,19 +40,19 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
       <ul class="nav navbar-nav">
 
-        <li class="active"><a href="{{url('/administrador')}}">Registrar <span class="sr-only">(current)</span></a></li>
+        <li class="active"><a href="{{url('/administrador')}}">Registrar Cuenta <span class="sr-only">(current)</span></a></li>
         <li><a href="{{url('/cita')}}">Registrar Cita</a></li>
 
-        <li class="active"><a href="{{url('consultarPacientes')}}">Paciente<span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Administrador</a></li>
+        <li class=""><a href="{{url('consultarPacientes')}}">Paciente<span class="sr-only">(current)</span></a></li>
+        <li><a href="{{url('/mostrarCita')}}">Modificar Citas</a></li>
 
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Iniciar Sension<span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Iniciar Sesion<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
 
-            <li><a href="{{url('/mostrarCita')}}">Modificar Citas</a></li>
-            <li><a href="{{url('/asignarrequisitos')}}">Requisitos</a></li>
-            <li><a href="{{url('/consultarclientes')}}">Clientes</a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
 
             <li class="divider"></li>
             <li><a href="#">Separated link</a></li>
@@ -68,7 +68,7 @@
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
+        <li><a href="{{url('/login')}}">Login</a></li>
       </ul>
     </div>
   </div>
@@ -90,9 +90,11 @@
     <small>Consultorio Medico &copy; 2016</small>
   </div>
 </footer>
+
 </div>
 <script src="js/jquery-2.0.0.min.js"></script>   
-<script src="{{asset("js/bootstrap.js")}}"></script>
+<script src="js/bootstrap.js"></script>
+   
 </section>
 
 </body>

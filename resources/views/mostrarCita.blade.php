@@ -3,7 +3,7 @@
 <h1>Citas Registradas</h1>
 @stop
 @section('contenido')
-				<a href="{{url('cita')}}" class="btn btn-success">Nueva Cita
+				<a href="{{url('cita')}}" class="btn btn-primary">Nueva Cita
 				<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
 				</a>
 			</div>
@@ -14,7 +14,7 @@
 					<thead>
 						<tr>
 							<th>ID</th>
-							<th>ID Paciente</th>
+							<th>Nombre Paciente</th>
 							<th>ID Administrador</th>
 							<th>Descripcion</th>
 							<th>Fecha</th>
@@ -29,7 +29,7 @@
 						@foreach($cita as $p)
 						<tr>
 							<td>{{$p->id}}</td>
-							<td>{{$p->id_paciente}}</td>
+							<td>{{$p->nombre}}</td>
 							<td>{{$p->id_administrador}}</td>
 							<td>{{$p->descripcion}}</td>
 							<td>{{$p->fecha}}</td>

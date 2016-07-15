@@ -5,6 +5,8 @@
 @section('contenido')
 <div class="clos-xs-4"></div>
 <div class="col-xs-8  " >
+
+
 				<form action="{{url('/guardarCita')}}" method="POST">
 					<input type="hidden" name="_token" value="{{csrf_token() }}">
 					
@@ -42,7 +44,7 @@
 							<div class="input-group">
                                 <input type="text" class="form-control datepicker" name="date" value="{{old('date')}}">
                                 <div class="input-group-addon">
-                                    <span class="glyphicon glyphicon-calendar "aria-hidden="true"></span>
+                                    <span class="glyphicon glyphicon-calendar "></span>
                                 </div>
                             </div>
 
@@ -62,7 +64,7 @@
 					</div>
 					
 					<input type="submit" class="btn btn-primary">
-					<a href="{{url('/')}}" class="btn btn-danger"> Cancelar</a>
+					<a href="{{url('/')}}" class="btn btn-default"> Cancelar</a>
 						</div>
 
 					

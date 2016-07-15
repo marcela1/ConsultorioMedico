@@ -4,7 +4,7 @@
 @stop
 @section('contenido')
 
-<div class="col-xs-6  " >
+<div class="col-xs-12 col-sm-6 col-md-6" >
 				<form action="{{url('/guardarAdministrador')}}" method="POST">
 					<input type="hidden" name="_token" value="{{csrf_token() }}">
 					<!-- 
@@ -78,7 +78,7 @@
 						</div>
 
 
-				<div class="col-xs-6 " >
+				<div class="col-xs-12 col-sm-6 col-md-4 " >
 					
 				
 				
@@ -112,7 +112,7 @@
          				 @endif
 					</div>
 					<input type="submit" class="btn btn-primary">
-					<a href="{{url('/')}}" class="btn btn-danger"> Cancelar</a>
+					<a href="{{url('/')}}" class="btn btn-default"> Cancelar</a>
 				</div>
 				
 				</form>

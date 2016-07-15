@@ -34,13 +34,15 @@ class citaController extends Controller
 	}
 	public function mostrarCita(){
 		$cita=DB::table('cita')
-		//->join('pacientes' , 'cita.id_paciente' , '=' , 'pacientes.id')
-		//->select('cita.id','cita.id_paciente', 'pacientes.nombre')
-		//->orderBy('id', 'asc')
+		->join('pacientes' , 'cita.id_paciente' , '=' , 'pacientes.id')
+		->select('cita.id','pacientes.nombre','cita.id_administrador', 'descripcion','fecha','hora','consultorio')
+		->orderBy('fecha', 'asc')
+		->orderBy( 'hora', 'asc')
 		->get();
+	
 		//traer la informacion de la tabla
 		//dd($usuarios);
-		return view('/mostrarCita', compact('cita'));
+		return view('/mostrarCita', compact('cita' , 'administradores'));
 
 	}
 	public function eliminarCita($id){
