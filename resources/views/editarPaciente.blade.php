@@ -100,7 +100,17 @@
 							<input type="radio" name="EstadoCivil"  value="Viudo">Viudo
 							<input type="radio" name="EstadoCivil" checked="true"  value="Otro">Otro
 							<?php
-							}		
+							}
+							else if($pacientes->estado_civil == "")
+							{
+							?>
+							<input type="radio" name="EstadoCivil"  value="Soltero">Soltero
+							<input type="radio" name="EstadoCivil" value="Casado">Casado
+							<input type="radio" name="EstadoCivil"  value="Union Libre">Union Libre
+							<input type="radio" name="EstadoCivil"  value="Viudo">Viudo
+							<input type="radio" name="EstadoCivil"  value="Otro">Otro
+							<?php
+							}			
 							?>	
 					</div>
 					<div class="form-group, col-xs-6">
