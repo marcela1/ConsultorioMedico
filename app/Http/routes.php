@@ -11,9 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('master');
-});
+
+
 Route::get('/administrador', 'administradorController@registrarAdministrador');
 Route::post('/guardarAdministrador', 'administradorController@guardarAdministrador');
 
@@ -27,3 +26,22 @@ Route::get('/mostrarCita', 'citaController@mostrarCita');
 Route::get('/eliminarCita/{id}', 'citaController@eliminarCita');
 Route::get('/modificarCita/{id}','citaController@modificarCita');
 Route::post('/actualizarCita/{id}','citaController@actualizarCita');
+
+Route::get('/ ', function () {
+    return view('principal');
+});
+
+
+Route::get('/consultarPacientes','ConsultorioController@consultarPacientes');
+
+Route::get('/registrarPaciente', 'ConsultorioController@registrarPaciente');
+
+Route::post('/guardarPaciente','ConsultorioController@guardarPaciente');
+
+Route::get('/eliminarPaciente/{id}','ConsultorioController@eliminarPaciente');
+
+Route::get('/editarPaciente/{id}','ConsultorioController@editarPaciente');
+
+Route::post('/actualizarPaciente/{id}', 'ConsultorioController@actualizarPaciente');
+
+
