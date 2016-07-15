@@ -20,7 +20,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="{{url('/')}}">Consultorio Medico</a>
+      <a class="navbar-brand" href="{{url('/')}}">Inicio</a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
@@ -55,15 +55,11 @@
 
     </div>
   </header>  
-<section class="contenido wrapper">
-<div class="container">
-	<div class="row">
-		<div class="col-xs-12">
+
 			@yield('encabezado')
-			<hr>
+
 			@yield('contenido')
-		</div>
-	</div>	
+	
 <footer class="row">
   <div class="col-xs-12 well text-center">
     <small>Consultorio Medico &copy; 2016</small>
@@ -71,7 +67,7 @@
 </footer>
 </div>
 <script src="{{asset("js/bootstrap.js")}}"></script>
-</section>
+
 
 </body>
 </html>

@@ -115,6 +115,7 @@
 						<label for="Correo">Correo Electronico</label>
 						<input type="text" class="form-control" name="Correo">
 					</div>
+					
 					<div class="col-xs-12">
 					<input type="submit" class="btn btn-primary">
 					<a href="{{url('/consultarPacientes')}}" class="btn btn-danger">Cancelar</a>
