@@ -125,10 +125,14 @@
 						<label for="TipoSangre">Tipo de Sangre</label>
 						<input type="text" class="form-control" value="{{$pacientes->tipo_sangre}}" name="TipoSangre">
 					</div>
-					
+					<div class="form-group, col-xs-12">
+						<label for="Seguro">Portador de Seguro Medico: </label>
+						SI<input type="radio" name="Seguro" id="si" value="SI">
+						NO<input type="radio" name="Seguro" id="no" value="NO">
+					<br><br></div>
 					<div class="form-group, col-xs-6">
 						<label for="SeguroMedico">Nombre del seguro medico</label>
-						<input type="text" class="form-control" value="{{$pacientes->seguro_medico}}" name="SeguroMedico">
+						<input type="text" class="form-control" id="Seguro" value="{{$pacientes->seguro_medico}}" name="SeguroMedico">
 					</div>
 					<div class="form-group, col-xs-6">
 						<label for="CURP">CURP (Clave Unica de Registro de Poblacion)</label>
@@ -186,4 +190,18 @@
 					<a href="{{url('/consultarPacientes')}}" class="btn btn-danger">Cancelar</a>
 					</div>
 				</form>
+				<script >
+					$(document).ready(function() {
+						$("#no").click(function(){
+							$("#Seguro").prop("disabled", true);
+							$("#Seguro").val('');
+						});
+
+						$("#si").click(function(){
+							$("#Seguro").prop("disabled", false);
+
+						});
+					
+					});
+				</script>
 @stop
