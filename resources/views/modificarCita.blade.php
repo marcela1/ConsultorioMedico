@@ -1,6 +1,6 @@
 @extends('master')
 @section('encabezado')
-<h1>Registrar Cita </h1>
+<h1>Editar Cita </h1>
 @stop
 @section('contenido')
 <div class="clos-xs-4"></div>
