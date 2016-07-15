@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
 
+<div class="jumbotron" style="background: #FFFFFF">
+
+</div>
   <meta charset="UTF-8">
   <title>Principal</title>
 
