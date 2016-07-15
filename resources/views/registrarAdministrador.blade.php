@@ -114,7 +114,7 @@
 					<input type="submit" class="btn btn-primary">
 					<a href="{{url('/')}}" class="btn btn-danger"> Cancelar</a>
 				</div>
-					
+				
 				</form>
-		
+			
 @stop
