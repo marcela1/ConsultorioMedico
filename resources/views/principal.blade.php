@@ -5,6 +5,22 @@
   
 @section('contenido')
 
+<div class="jumbotron" style="background: #ecf0f1">
+<center>
+<h1 <p class="text-primary">Consultorio Medico</p></h1>
+</center>
+</div>
+
+
+
+<div class="social">
+    <ul>
+      <li><a href="http://www.facebook.com" target="_blank" class="icon-facebook"></a></li>
+      <li><a href="http://www.twitter.com" target="_blank" class="icon-twitter"></a></li>
+      <li><a href="http://www.google.com" target="_blank" class="icon-google"></a></li>
+      <li><a href="http://www.instagram.com" target="_blank" class="icon-instagram"></a></li>
+    </ul>
+</div>
 <div class="main">
 	<div class="slides">
 		<img src="imagenes/5.jpg" alt="">
@@ -45,11 +61,13 @@ $(function(){
 
 
 
-<div class="jumbotron" style="background: #EFF2F4">
-<img src="imagenes/PERSONAS-SIN-FONDO.png" width="100" height="100" ALIGN="left"></a>
+<div class="jumbotron" style="background: #BFDAE3">
+  <center>
+
 <h1 <p class="text-primary">Quienes somos</p></h1>
   <p>Somos un equipo de desarrollo web encargado de realizar paginas con un alto nivel de calidad facilitando 
     el trabajo diario de los usuarios activos</p>
+    </center>
 </div>
 
 <div class="form-group, col-xs-6">
@@ -76,10 +94,10 @@ y donde nuestra prosperidad se comparta entre nuestros Empleados y Proveedores.<
 </div>
 </div>
 
-<h1 <p class="text-primary">_____________________________________________</p></h1>
+<h1 <p class="text-primary">__________________________________________________________________________</p></h1>
 
 
-
+<div class="jumbotron" style="background: #BFDAE3">
 <h1 <p class="text-primary">Contactanos</p></h1>
 
 <form class="form-horizontal">
@@ -116,6 +134,7 @@ y donde nuestra prosperidad se comparta entre nuestros Empleados y Proveedores.<
     </div>
   </fieldset>
 </form>
+</div>
 
 <div class="jumbotron" style="background: #FFFFFF">
 

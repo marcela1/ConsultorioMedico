@@ -18,7 +18,6 @@
     <!-- Languaje -->
     <script src="{{asset('datePicker/locales/bootstrap-datepicker.es.min.js')}}"></script>
  
-
 </head>
 
 
@@ -31,29 +30,19 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-
-
-      <a class="navbar-brand" href="{{url('/')}}">Consultorio Medico</a>
-
+      <a class="navbar-brand" href="{{url('/')}}">Inicio</a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
       <ul class="nav navbar-nav">
-
-        <li class="active"><a href="{{url('/administrador')}}">Registrar Cuenta <span class="sr-only">(current)</span></a></li>
-        <li><a href="{{url('/cita')}}">Registrar Cita</a></li>
-
-        <li class=""><a href="{{url('consultarPacientes')}}">Paciente<span class="sr-only">(current)</span></a></li>
-        <li><a href="{{url('/mostrarCita')}}">Modificar Citas</a></li>
-
+        <li class="active"><a href="{{url('consultarPacientes')}}">Paciente<span class="sr-only">(current)</span></a></li>
+        <li><a href="{{url('/administrador')}}">Administrador</a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Iniciar Sesion<span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Otros<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-
+            <li><a href="{{url('/cita')}}">Registrar Citas</a></li>
+            <li><a href="{{url('/mostrarCita')}}">Modificar Citas</a></li>
+            <li><a href="#">Something else here</a></li>
             <li class="divider"></li>
             <li><a href="#">Separated link</a></li>
             <li class="divider"></li>
@@ -68,7 +57,7 @@
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="{{url('/login')}}">Login</a></li>
+        <li><a href="#">Link</a></li>
       </ul>
     </div>
   </div>
@@ -76,26 +65,19 @@
 
     </div>
   </header>  
-<section class="contenido wrapper">
-<div class="container">
-	<div class="row">
-		<div class="col-xs-12">
-			@yield('encabezado')
-			<hr>
-			@yield('contenido')
-		</div>
-	</div>	
+
+      @yield('encabezado')
+
+      @yield('contenido')
+  
 <footer class="row">
   <div class="col-xs-12 well text-center">
     <small>Consultorio Medico &copy; 2016</small>
   </div>
 </footer>
-
 </div>
-<script src="js/jquery-2.0.0.min.js"></script>   
-<script src="js/bootstrap.js"></script>
-   
-</section>
+<script src="{{asset("js/bootstrap.js")}}"></script>
+
 
 </body>
 </html>
