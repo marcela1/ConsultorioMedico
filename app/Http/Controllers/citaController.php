@@ -30,7 +30,7 @@ class citaController extends Controller
 
 
 		
-		return Redirect('/');
+		return Redirect('/mostrarCita');
 	}
 	public function mostrarCita(){
 		$cita=DB::table('cita')
