@@ -8,8 +8,13 @@
 					<div class="form-group, col-xs-12">
 						<label for="FechaRegistro">Fecha de Registro</label>
 						
-						<input type="text" class="form-control" name="FechaRegistro">
-						<label for="FechaRegistro">Ejemplo: 2016-01-15</label><br>
+							<div class="input-group">
+                                <input type="text" class="form-control datepicker" name="FechaRegistro" >
+                                <div class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar "></span>
+                                </div>
+                            </div>
+                            
 					<br></div>
 					<div class="form-group, col-xs-4" >
 						<label for="Nombre">Nombre</label>
@@ -23,9 +28,16 @@
 						<label for="ApellidoMat">Apellido Materno</label>
 						<input type="text" class="form-control" name="ApellidoMat">
 					<br></div>
+					
 					<div class="form-group, col-xs-6">
 						<label for="FechaNacimiento">Fecha de Nacimiento</label>
-						<input type="text" class="form-control" name="FechaNacimiento">
+						
+							<div class="input-group">
+                                <input type="text" class="form-control datepicker" name="FechaNacimiento" >
+                                <div class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar "></span>
+                                </div>
+                            </div>      
 					<br></div>
 				
 					<div class="form-group, col-xs-12">
@@ -133,4 +145,11 @@
 					
 					});
 				</script>
+				<script>
+    	$('.datepicker').datepicker({
+        format: "yyyy/mm/dd",
+        language: "es",
+        autoclose: true
+    });
+</script>
 @stop

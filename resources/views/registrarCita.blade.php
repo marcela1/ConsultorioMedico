@@ -28,6 +28,7 @@
 						 <input type="text" class="form-control" name="id_paciente" value="{{old('id_paciente')}}">
 
 					</div>
+					
 					<div class="form-group">
 						<label for="id_administrador">ID Administrador</label>
 						<input type="text" class="form-control" name="id_administrador" value="{{old('id_administrador')}}">
