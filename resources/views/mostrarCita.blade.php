@@ -15,7 +15,7 @@
 						<tr>
 							<th>ID</th>
 							<th>Nombre Paciente</th>
-							<th>ID Administrador</th>
+							<th>Administrador</th>
 							<th>Descripcion</th>
 							<th>Fecha</th>
 							<th>Hora</th>
@@ -30,7 +30,7 @@
 						<tr>
 							<td>{{$p->id}}</td>
 							<td>{{$p->nombre}}</td>
-							<td>{{$p->id_administrador}}</td>
+							<td>{{$p->na}}</td>
 							<td>{{$p->descripcion}}</td>
 							<td>{{$p->fecha}}</td>
 							<td>{{$p->hora}}</td>

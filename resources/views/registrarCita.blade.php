@@ -22,16 +22,24 @@
 				@endif
 				
 
-					
 					<div class="form-group">
-						<label for="id_paciente"> ID Paciente </label>
-						 <input type="text" class="form-control" name="id_paciente" value="{{old('id_paciente')}}">
+						<label for="id_paciente">Paciente:</label>
+								<select class="form-control" name="id_paciente" id="">
+								<option value="">Seleccione Un Paciente</option>
+								@foreach($pacientes as $p)
+								<option value="{{$p->id}}">{{$p->nombre}}</option>
+								@endforeach
+								</select>
 
 					</div>
-					
 					<div class="form-group">
-						<label for="id_administrador">ID Administrador</label>
-						<input type="text" class="form-control" name="id_administrador" value="{{old('id_administrador')}}">
+						<label for="id_administrador">Administrador:</label>
+								<select class="form-control" name="id_administrador" id="">
+								<option value="">Seleccione Un Administrador</option>
+								@foreach($administradores as $c)
+								<option value="{{$c->id}}">{{$c->nombre}}</option>
+								@endforeach
+								</select>
 
 					</div>
 					<div class="form-group">

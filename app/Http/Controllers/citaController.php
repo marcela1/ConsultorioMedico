@@ -10,10 +10,13 @@ use App\Administrador;
 use App\Cita;
 use App\Paciente;
 use App\Http\Requests\CitaRequest;
+
 class citaController extends Controller
 {
     public function registrarCita(){
-		return view('registrarCita');
+    	$administradores= Administrador::all();
+    	$pacientes= Paciente::all();
+		return view('registrarCita', compact('administradores', 'pacientes'));
 	}
 
 	public function guardarCita(CitaRequest $request){
@@ -28,21 +31,20 @@ class citaController extends Controller
 		$citas->consultorio=$request->input('consultorio');
 		$citas->save();
 
-
-		
 		return Redirect('/mostrarCita');
 	}
 	public function mostrarCita(){
 		$cita=DB::table('cita')
 		->join('pacientes' , 'cita.id_paciente' , '=' , 'pacientes.id')
-		->select('cita.id','pacientes.nombre','cita.id_administrador', 'descripcion','fecha','hora','consultorio')
-		->orderBy('fecha', 'asc')
-		->orderBy( 'hora', 'asc')
+		->join('administradores', 'cita.id_administrador' ,'=' , 'administradores.id')
+		->select('cita.id','pacientes.nombre','administradores.nombre as na', 'descripcion','fecha','hora','consultorio')
+		->orderBy('cita.fecha', 'asc')
+		->orderBy( 'cita.hora', 'asc')
 		->get();
 	
 		//traer la informacion de la tabla
 		//dd($usuarios);
-		return view('/mostrarCita', compact('cita' , 'administradores'));
+		return view('/mostrarCita', compact('cita' ));
 
 	}
 	public function eliminarCita($id){
