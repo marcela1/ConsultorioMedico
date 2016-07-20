@@ -45,7 +45,7 @@
           <ul class="dropdown-menu" role="menu">
             <li><a href="{{url('/cita')}}">Registrar Citas</a></li>
             <li><a href="{{url('/mostrarCita')}}">Modificar Citas</a></li>
-            <li><a href="#">Something else here</a></li>
+            <li><a href="{{url('/mostrarConsulta')}}">Gestion de Consulta</a></li>
             <li class="divider"></li>
             <li><a href="#">Separated link</a></li>
             <li class="divider"></li>

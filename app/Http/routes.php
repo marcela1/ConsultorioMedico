@@ -27,6 +27,13 @@ Route::get('/eliminarCita/{id}', 'citaController@eliminarCita');
 Route::get('/modificarCita/{id}','citaController@modificarCita');
 Route::post('/actualizarCita/{id}','citaController@actualizarCita');
 
+Route::get('/mostrarConsulta', 'consultaController@mostrarConsulta');
+Route::get('/eliminarConsulta/{id}', 'consultaController@eliminarConsulta');
+Route::get('/modificarConsulta/{id}','consultaController@modificarConsulta');
+Route::post('/actualizarConsulta/{id}','consultaController@actualizarConsulta');
+
+Route::get('/mostrarHistorial', 'historialController@mostrarHistorial');
+
 Route::get('/ ', function () {
     return view('principal');
 });

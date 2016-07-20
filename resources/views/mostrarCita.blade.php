@@ -33,7 +33,7 @@
 						<tr>
 							<td>{{$p->id}}</td>
 							<td>{{$p->nombre}}</td>
-							<td>{{$p->na}}</td>
+							<td>{{$p->na }}</td>
 							<td>{{$p->descripcion}}</td>
 							<td>{{$p->fecha}}</td>
 							<td>{{$p->hora}}</td>
