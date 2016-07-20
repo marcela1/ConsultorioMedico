@@ -1,12 +1,18 @@
 @extends('master')
 @section('encabezado')
-<h1>Registrar Paciente</h1>
+<div class="jumbotron" style="background: #2878C2;height:150px;">
+
+<h1><img src="imagenes/registro.png" width="85" height="82" ALIGN="left"><font color="White" face="verdana">Registrar Pacientes</font></h1>
+</div>
 @stop
 @section('contenido')
+<center>
 				<form action="{{url('/guardarPaciente')}}" method="POST">
 					<input type="hidden" name="_token" value="{{csrf_token()}}">
+					<div style="width:1200px;height:685px;border:3px solid #8DC0E9;">
+
 					<div class="form-group, col-xs-12">
-						<label for="FechaRegistro">Fecha de Registro</label>
+						<label for="FechaRegistro"><P ALIGN=left><b>Fecha de Registro:</b></label>
 						
 							<div class="input-group">
                                 <input type="text" class="form-control datepicker" name="FechaRegistro" >
@@ -16,21 +22,22 @@
                             </div>
                             
 					<br></div>
+					<div P ALIGN=left>
 					<div class="form-group, col-xs-4" >
-						<label for="Nombre">Nombre</label>
+						<label for="Nombre"><b>Nombre:</b></label>
 						<input type="text" class="form-control" name="Nombre">
 					</div>
 					<div class="form-group, col-xs-4">
-						<label for="ApellidoPat">Apellido Paterno</label>
+						<label for="ApellidoPat"><b>Apellido Paterno:</b></label>
 						<input type="text" class="form-control" name="ApellidoPat">
 					</div>
 					<div class="form-group, col-xs-4">
-						<label for="ApellidoMat">Apellido Materno</label>
+						<label for="ApellidoMat"><b>Apellido Materno:</b></label>
 						<input type="text" class="form-control" name="ApellidoMat">
 					<br></div>
 					
 					<div class="form-group, col-xs-6">
-						<label for="FechaNacimiento">Fecha de Nacimiento</label>
+						<label for="FechaNacimiento"><b>Fecha de Nacimiento:</b></label>
 						
 							<div class="input-group">
                                 <input type="text" class="form-control datepicker" name="FechaNacimiento" >
@@ -41,12 +48,12 @@
 					<br></div>
 				
 					<div class="form-group, col-xs-12">
-						<label for="Sexo">Sexo</label>
+						<label for="Sexo"><b>Sexo:  </b></label>
 						<input type="radio" name="Sexo" value="Femenio">Femenino
 						<input type="radio" name="Sexo" value="Masculino">Masculino
 					<br><br></div>
 					<div class="form-group, col-xs-12">
-						<label for="EstadoCivil">Estado Civil</label>
+						<label for="EstadoCivil"><b>Estado Civil:  </b></label>
 						<input type="radio" name="EstadoCivil" value="Soltero">Soltero
 						<input type="radio" name="EstadoCivil" value="Casado">Casado
 						<input type="radio" name="EstadoCivil" value="Union Libre">Union Libre
@@ -54,79 +61,94 @@
 						<input type="radio" name="EstadoCivil" value="Otro">Otro
 					<br><br></div>
 					<div class="form-group, col-xs-6">
-						<label for="LugarNacimiento">Lugar de Nacimiento</label>
+						<label for="LugarNacimiento"><b>Lugar de Nacimiento:</b></label>
 						<input type="text" class="form-control" name="LugarNacimiento">
 					</div>
 					<div class="form-group, col-xs-6">
-						<label for="Ocupacion">Ocupacion</label>
+						<label for="Ocupacion"><b>Ocupación:</b></label>
 						<input type="text" class="form-control" name="Ocupacion">
 					<br></div>
 					<div class="form-group, col-xs-6">
-						<label for="TipoSangre">Tipo de Sangre</label>
+						<label for="TipoSangre"><b>Tipo de Sangre:</b></label>
 						<input type="text" class="form-control" name="TipoSangre">
 					<br></div>
 					
 					<div class="form-group, col-xs-12">
-						<label for="Seguro">Portador de Seguro Medico: </label>
+						<label for="Seguro"><b>Portador de Seguro Medico:</b></label>
 						SI<input type="radio" name="Seguro" id="si" value="SI">
 						NO<input type="radio" name="Seguro" id="no" value="NO">
 					<br><br></div>
 
 					<div class="form-group, col-xs-6">
-						<label for="SeguroMedico">Nombre del seguro medico</label>
+						<label for="SeguroMedico"><b>Nombre del seguro medico:</b></label>
 						<input type="text" class="form-control" ID="Seguro" name="SeguroMedico">
 					</div>
 					<div class="form-group, col-xs-6">
-						<label for="CURP">CURP (Clave Unica de Registro de Poblacion)</label>
+						<label for="CURP"><b>CURP (Clave Unica de Registro de Poblacion):</b></label>
 						<input type="text" class="form-control" name="CURP">
 					<br></div>
+				</div>
+				</div> 
+
+				<br><div class="jumbotron" style="background: #8DC0E9" >
+
+				<div P ALIGN=left>
 					<div class="form-group, col-xs-12">
-						<label for="Direccion">Direccion</label>
+						<h4><label for="Direccion"><font color="White" face="verdana"><b>Dirección</b></font></label></h4>
 					</div>
+				</div>
+			</div>
+					<div style="width:1200px;height:430px;border:3px solid #8DC0E9;">
+					<div P ALIGN=left>
+
 					<div class="form-group, col-xs-6">
-						<label for="Calle">Calle</label>
+
+						<label for="Calle"><b>Calle:</b></label>
 						<input type="text" class="form-control" name="Calle">
 					</div>
+
 					<div class="form-group, col-xs-6">
-						<label for="Colonia">Colonia</label>
+						<label for="Colonia"><b>Colonia:</b></label>
 						<input type="text" class="form-control" name="Colonia">
 					</div>
 					<div class="form-group, col-xs-6">
-						<label for="Ciudad">Ciudad</label>
+						<label for="Ciudad"><b>Ciudad:</b></label>
 						<input type="text" class="form-control" name="Ciudad">
 					</div>
 					<div class="form-group, col-xs-6">
-						<label for="CP">C.P.</label>
+						<label for="CP"><b>C.P.:</b></label>
 						<input type="text" class="form-control" name="CP">
 					</div>
 					<div class="form-group, col-xs-6">
-						<label for="Telefono">Telefono</label>
+						<label for="Telefono"><b>Telefono:</b></label>
 						<input type="text" class="form-control" name="Telefono">
 					</div>
 					<div class="form-group, col-xs-6">
-						<label for="NumeroExterior_Interior">Numero Exterior-Interior</label>
+						<label for="NumeroExterior_Interior"><b>Numero Exterior-Interior:</b></label>
 						<input type="text" class="form-control" name="NumeroExterior_Interior">
 					</div>
 					<div class="form-group, col-xs-6">
-						<label for="Municipio">Municipio</label>
+						<label for="Municipio"><b>Municipio:</b></label>
 						<input type="text" class="form-control" name="Municipio">
 					</div>
 					<div class="form-group, col-xs-6">
-						<label for="Estado">Estado</label>
+						<label for="Estado"><b>Estado:</b></label>
 						<input type="text" class="form-control" name="Estado">
 					</div>
 					<div class="form-group, col-xs-6">
-						<label for="Pais">Pais</label>
+						<label for="Pais"><b>Pais:</b></label>
 						<input type="text" class="form-control" name="Pais">
 					</div>
 					<div class="form-group, col-xs-6">
-						<label for="Celular">Celular</label>
+						<label for="Celular"><b>Celular:</b></label>
 						<input type="text" class="form-control" name="Celular">
 					</div>
 					<div class="form-group, col-xs-6">
-						<label for="Correo">Correo Electronico</label>
+						<label for="Correo"><b>Correo Electronico:</b></label>
 						<input type="text" class="form-control" name="Correo">
 					</div>
+				</div>
+			</div>
 					
 					<div class="col-xs-12">
 					<input type="submit" class="btn btn-primary">
@@ -152,4 +174,5 @@
         autoclose: true
     });
 </script>
+</center>
 @stop

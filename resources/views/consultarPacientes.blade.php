@@ -1,6 +1,9 @@
 @extends('master')
 @section('encabezado')
-<h1>Gestion de Pacientes</h1>
+<div class="jumbotron" style="background: #2878C2;height:150px;">
+
+<h1><img src="imagenes/100.png" width="100" height="80" ALIGN="left"><font color="White" face="verdana">Pacientes Registrados</font></h1>
+</div>
 @stop
 @section('contenido')
 
@@ -8,7 +11,7 @@
 				<span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>
 						<table class="table table-hover">
 							<thead>
-								<tr class="active">
+								<tr class="success">
 									<th>ID</th>
 									<th>Nombre</th>
 									<th>Apellido Paterno</th>

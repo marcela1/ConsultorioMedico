@@ -1,6 +1,9 @@
 @extends('master')
 @section('encabezado')
-<h1>Citas Registradas</h1>
+<div class="jumbotron" style="background: #2878C2;height:150px;">
+
+<h1><img src="imagenes/100.png" width="100" height="80" ALIGN="left"><font color="White" face="verdana">Citas Registradas</font></h1>
+</div>
 @stop
 @section('contenido')
 				<a href="{{url('cita')}}" class="btn btn-primary">Nueva Cita
@@ -12,7 +15,7 @@
 			<div class="col-xs-12">
 				<table class="table table-hover">
 					<thead>
-						<tr>
+						<tr class="success">
 							<th>ID</th>
 							<th>Nombre Paciente</th>
 							<th>Administrador</th>

@@ -5,11 +5,7 @@
   
 @section('contenido')
 
-<div class="jumbotron" style="background: #ecf0f1">
-<center>
-<h1 <p class="text-primary">Consultorio Medico</p></h1>
-</center>
-</div>
+
 
 
 
@@ -62,6 +58,7 @@ $(function(){
 
 
 <div class="jumbotron" style="background: #BFDAE3">
+
   <center>
 
 <h1 <p class="text-primary">Quienes somos</p></h1>
@@ -72,24 +69,24 @@ $(function(){
 
 <div class="form-group, col-xs-6">
 
-<div class="jumbotron" style="background: #EFF2F4">
+<div class="jumbotron" style="background: #399EF1">
 <blockquote>
-<h1 <p class="text-primary">Mision</p></h1>
-<p  style="color: #1C81AC margin-left:30px"> Nuestra misión como empresa de Desarrollo Web es ofrecer soluciones de Negocios que impulsen
+<h1 <p class="text-primary"><font color="White" face="verdana">Mision</font></p></h1>
+<p  style="color: #1C81AC margin-left:30px"><font color="White" face="verdana"> Nuestra misión como empresa de Desarrollo Web es ofrecer soluciones de Negocios que impulsen
 al cliente en su incursión al mundo de la Internet, a través de un servicio de alta calidad,
-tecnología confiable, con diseño de vanguardia, y un Equipo de Trabajo con espíritu de servicio.</p>
+tecnología confiable, con diseño de vanguardia, y un Equipo de Trabajo con espíritu de servicio. </font></p>
 </blockquote>
 </div>
 </div>
 <div class="form-group, col-xs-6">
 
-<div class="jumbotron" style="background: #EFF2F4">
+<div class="jumbotron" style="background: #399EF1">
 <blockquote class="blockquote-reverse">
-<h1 <p class="text-primary">Vision</p></h1>
-<p>Tenemos proyectado ser la mejor alternativa en desarrollo Web para el clientes que 
+<h1 <p class="text-primary"><font color="White" face="verdana">Vision</font></p></h1>
+<p ><font color="White" face="verdana">Tenemos proyectado ser la mejor alternativa en desarrollo Web para el clientes que 
 busca explotar las oportunidades que Internet le ofrece para impulsar su Negocio, 
 en donde nuestra Calidad se refleje en una excelente relación con nuestros Clientes, 
-y donde nuestra prosperidad se comparta entre nuestros Empleados y Proveedores.</p>
+y donde nuestra prosperidad se comparta entre nuestros Empleados y Proveedores.</font></p>
 </blockquote>
 </div>
 </div>
