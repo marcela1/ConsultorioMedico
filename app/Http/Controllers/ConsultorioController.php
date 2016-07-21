@@ -8,7 +8,9 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use DB;
 use App\Paciente;
-
+use App\Administrador;
+use App\Receta;
+use App\Consulta;
 
 class ConsultorioController extends Controller
 {
@@ -91,5 +93,51 @@ class ConsultorioController extends Controller
       $pacientes ->celular= $request -> input('Celular');
       $pacientes->save();
       return Redirect('/consultarPacientes');
+    }
+
+    public function registrarConsulta(){
+      $administradores= Administrador::all();
+      $pacientes= Paciente::all();
+      return view('registrarConsulta', compact('administradores', 'pacientes'));
+    }
+
+     public function guardarConsulta(Request $request){
+      $consultas=Consulta::all();
+      $consultas = new Consulta();
+      $consultas ->fecha = $request->input('FechaConsulta');
+      $consultas ->hora= $request -> input('Hora');
+      $consultas ->id_paciente = $request->input('Nombre');
+      $consultas ->id_administrador = $request->input('Doctor');
+      $consultas ->peso= $request -> input('Peso');
+      $consultas ->altura = $request->input('Altura');
+      $consultas ->IMC =$request -> input('IMC');
+      $consultas ->temperatura_corporal = $request->input('Temperatura');
+      $consultas ->presion= $request -> input('Presion');
+      $consultas ->frecuencia_respiratoria = $request->input('FrecuenciaRespiratoria');
+      $consultas ->frecuencia_cardiaca = $request->input('FrecuenciaCardiaca');
+      $consultas ->antecedentes_familiares= $request -> input('AntecedentesFamiliares');
+      $consultas ->padecimientos = $request->input('Padecimiento');
+      $consultas ->clasificacion= $request -> input('Enfermedad');
+      $consultas ->diagnostico = $request->input('Diagnostico');
+      $consultas ->tratamiento= $request -> input('Tratamiento');
+      $consultas->save();
+     return Redirect('/');
+    }
+
+    public function registrarReceta(){
+      return view('registrarReceta');
+    }
+
+    public function guardarReceta(Request $request){
+      $recetas=Receta::all();
+      $recetas = new Receta();
+      $recetas ->fecha = $request->input('Fecha');
+      $recetas ->hora= $request -> input('Hora');
+      $recetas ->id_paciente = $request->input('Nombre');
+      $recetas ->peso= $request -> input('Peso');
+      $recetas ->tratamiento= $request -> input('Tratamiento');
+      $recetas ->id_administrador = $request->input('Doctor');
+      $recetas->save();
+     return Redirect('/');
     }
 }
