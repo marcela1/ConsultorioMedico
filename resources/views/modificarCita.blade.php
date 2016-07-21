@@ -1,10 +1,13 @@
 @extends('master')
 @section('encabezado')
-<h1>Editar Cita </h1>
+<div class="jumbotron" style="background: #2878C2;height:150px;">
+
+<h1><img src="{{asset("imagenes/edit.png")}}" width="85" height="75" ALIGN="left"><font color="White" face="verdana">Editar Cita</font></h1>
+</div>
 @stop
 @section('contenido')
-<div class="clos-xs-4"></div>
-<div class="col-xs-8  " >
+<center>
+
 				<form action="{{url('/actualizarCita')}}/{{$cita->id}}" method="POST">
 					<input type="hidden" name="_token" value="{{csrf_token() }}">
 					
@@ -20,24 +23,25 @@
 				@endif
 				
 
-					
-					<div class="form-group">
-						<label for="id_paciente"> ID Paciente </label>
+					<div style="width:1200px;height:430px;border:3px solid #8DC0E9;">
+					<div P ALIGN=left>
+					<div class="form-group, col-xs-12">
+						<label for="id_paciente"><b>ID Paciente:</b></label>
 						 <input value="{{$cita->id_paciente}}"type="text" class="form-control" name="id_paciente" >
 
 					</div>
-					<div class="form-group">
-						<label for="id_administrador">ID Administrador</label>
+					<div class="form-group, col-xs-12">
+						<label for="id_administrador"><b>ID Administrador:</b></label>
 						<input value="{{$cita->id_administrador}}"type="text" class="form-control" name="id_administrador" >
 
 					</div>
-					<div class="form-group">
-						<label for="descripcion">Descripcion</label>
+					<div class="form-group, col-xs-12">
+						<label for="descripcion"><b>Descripcion:</b></label>
 						<input value="{{$cita->descripcion}}"type="text" class="form-control" name="descripcion" >
 
 					</div>
-					<div class="form-group">
-						<label for="date">Fecha</label>
+					<div class="form-group, col-xs-12">
+						<label for="date"><b>Fecha:</b></label>
 						
 							<div class="input-group">
                                 <input value="{{$cita->fecha}}"type="text" class="form-control datepicker" name="date" >
@@ -48,22 +52,26 @@
 
 					</div>
 
-					<div class="form-group">
-						<label for="hora">Hora</label>
+					<div class="form-group. col-xs-12">
+						<label for="hora"><b>Hora:</b></label>
 						<input value="{{$cita->hora}}"type="time" class="form-control" name="hora" >
 
 						
 
 					</div>
-					<div class="form-group">
-						<label for="consultorio">Consultorio</label>
+					<div class="form-group, col-xs-12">
+						<label for="consultorio"><b>Consultorio:</b></label>
 						<input value="{{$cita->consultorio}}" type="text" class="form-control" name="consultorio" >
 						
 					</div>
+
+				</div>
+				</div>
+				<br>
 					
 					<input type="submit" class="btn btn-primary">
-					<a href="{{url('/mostrarCita')}}" class="btn btn-default"> Cancelar</a>
-						</div>
+					<a href="{{url('/mostrarCita')}}" class="btn btn-danger"> Cancelar</a>
+					</div>
 
 					
 				</form>
@@ -74,4 +82,5 @@
         autoclose: true
     });
 </script>
+</center>
 @stop
