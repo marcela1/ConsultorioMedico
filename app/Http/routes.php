@@ -46,6 +46,7 @@ Route::post('/actualizarPaciente/{id}', 'ConsultorioController@actualizarPacient
 
 
 
+
 /*Llamadas al controlador Auth*/
 //Route::get('login', 'AuthController@authenticate'); // Mostrar login
 //Route::post('login', 'AuthController@postLogin'); // Verificar datos

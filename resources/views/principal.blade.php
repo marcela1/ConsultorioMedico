@@ -18,12 +18,12 @@
     </ul>
 </div>
 <div class="main">
-	<div class="slides">
-		<img src="imagenes/5.jpg" alt="">
-		<img src="imagenes/6.jpg" alt="">
-		<img src="imagenes/3.jpg" alt="">
+  <div class="slides">
+    <img src="imagenes/5.jpg" alt="">
+    <img src="imagenes/6.jpg" alt="">
+    <img src="imagenes/3.jpg" alt="">
 
-	</div>
+  </div>
 
 </div>
 
@@ -33,7 +33,7 @@
 $(function(){
 
   $(".slides").slidesjs({
-  	   
+       
     play: {
       active: true,
         // [boolean] Generate the play and stop buttons.
