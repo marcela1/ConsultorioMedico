@@ -47,6 +47,7 @@
             <li><a href="{{url('/mostrarCita')}}">Modificar Citas</a></li>
             <li><a href="{{url('/mostrarConsulta')}}">Gestion de Consulta</a></li>
             <li><a href="{{url('/registrarConsulta')}}">Registrar Consulta</a></li>
+            <li><a href="{{url('/mostrarHistorial')}}">Historial Clinico</a></li>
             <li class="divider"></li>
             <li><a href="{{url('/registrarReceta')}}">Registrar Receta</a></li>
             <li class="divider"></li>

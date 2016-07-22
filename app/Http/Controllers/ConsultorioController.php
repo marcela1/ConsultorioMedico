@@ -11,6 +11,7 @@ use App\Paciente;
 use App\Administrador;
 use App\Receta;
 use App\Consulta;
+use App\Historial;
 
 class ConsultorioController extends Controller
 {
@@ -103,7 +104,8 @@ class ConsultorioController extends Controller
 
      public function guardarConsulta(Request $request){
       $consultas=Consulta::all();
-      $consultas = new Consulta();
+      $consultas = new Consulta(); 
+     
       $consultas ->fecha = $request->input('FechaConsulta');
       $consultas ->hora= $request -> input('Hora');
       $consultas ->id_paciente = $request->input('Nombre');
@@ -120,7 +122,13 @@ class ConsultorioController extends Controller
       $consultas ->clasificacion= $request -> input('Enfermedad');
       $consultas ->diagnostico = $request->input('Diagnostico');
       $consultas ->tratamiento= $request -> input('Tratamiento');
+     
       $consultas->save();
+     
+     
+      
+
+
      return Redirect('/registrarReceta');
     }
 

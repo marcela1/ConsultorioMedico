@@ -2,17 +2,27 @@
 @section('encabezado')
 <div class="jumbotron" style="background: #2878C2;height:150px;">
 
-<h1><img src="imagenes/100.png" width="100" height="80" ALIGN="left"><font color="White" face="verdana">Gestion de Consulta</font></h1>
+<h1><img src="imagenes/100.png" width="100" height="80" ALIGN="left"><font color="White" face="verdana">Historial Clinico</font></h1>
 </div>
 @stop
 @section('contenido')
-				<a href="{{url('cita')}}" class="btn btn-primary">Agregar Nueva Consulta
-				<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-				</a>
+				<div class="col-xs-12 ">
+				<form action="{{ url('/seleccionarHistorial')}}" method="POST">
+					<input type="hidden" name="_token" value="{{csrf_token() }}">
+					
+					<div class="form-group">
+						<label for="">Pacientes</label>
+						<select class="form-control"name="usuarios" id="">
+							@foreach($pacientes as $p)
+							<option value="{{$p->id}}">{{$p->nombre}}</option>
+							@endforeach
+						</select>
+						<input class="btn btn-primary"type="submit" value="Mostrar">
+					</div>
+					
+				</form>
 			</div>
-		</div>
-		<dir class="row">
-			<div class="col-xs-12">
+			<div class="col-xs-12 ">
 				<table class="table table-hover">
 					<thead>
 						<tr class="success">

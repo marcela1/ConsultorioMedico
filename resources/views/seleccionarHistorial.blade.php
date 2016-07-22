@@ -9,18 +9,17 @@
 			<form action="{{ url('/seleccionarHistorial')}}" method="POST">
 					<input type="hidden" name="_token" value="{{csrf_token() }}">
 					<div class="form-group">
-						<label for="">Nombre</label>
+						<label for="">Paciente</label>
 						<select class="form-control"name="historial" id="">
-							@foreach($historial as $h)
-							<option value="{{$h->id}}">{{$h->nombre}}</option>
+							@foreach($pacientes as $p)
+							<option value="{{$p->id}}">{{$p->nombre}}</option>
 							@endforeach
 						</select>
 						<input class="btn btn-primary" type="submit" value="Mostrar">
 					
 					</div>
 				</form>
-				<form action="{{ url('/actualizarHistorial')}}/{{$id}}" method="POST">
-					<input type="hidden" name="_token" value="{{csrf_token() }}">
+				
 		<dir class="row">
 			<div class="col-xs-12">
 				<table class="table table-hover">
