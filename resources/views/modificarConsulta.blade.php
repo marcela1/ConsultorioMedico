@@ -1,10 +1,17 @@
 @extends('master')
 @section('encabezado')
-<h1>Modificar Consulta</h1>
+<div class="jumbotron" style="background: #2878C2;height:150px;">
+
+<h1><img src="{{asset("imagenes/edit.png")}}" width="85" height="75" ALIGN="left"><font color="White" face="verdana">Modificar Consulta</font></h1>
+</div>
+
 @stop
 @section('contenido')
+<center>
 				<form action="{{url('/actualizarConsulta')}}/{{$consulta->id}}" method="POST">
 					<input type="hidden" name="_token" value="{{csrf_token()}}">
+			<div style="width:1200px;height:250px;border:3px solid #8DC0E9;">
+					<div P ALIGN=left>
 					<div class="form-group, col-xs-6">
 						<label for="FechaConsulta">Fecha: </label>
 						<div class="input-group">
@@ -36,9 +43,18 @@
 								@endforeach
 							</select>	<br>				
 					</div>
+		</div>
+	</div>
+	<br><div class="jumbotron" style="background: #8DC0E9" >
+
+				<div P ALIGN=left>
 					<div class="form-group, col-xs-12">
-						<label for="Signos">Signos Vitales</label><br>
+						<h4><label for="Signos"><font color="White" face="verdana"><b>Signos Vitales:</b></font></label><br></h4>
 					<br></div>
+				</div>
+		</div>
+	<div style="width:1200px;height:350px;border:3px solid #8DC0E9;">
+		<div P ALIGN=left>
 					<div class="form-group, col-xs-4">
 						<label for="Peso">Peso:</label>
 						<input value="{{$consulta->peso}}" type="text" class="form-control" name="Peso">
@@ -73,9 +89,19 @@
 						<label for="AntecedentesFamiliares">Antecedentes Familiares:</label>
 						<input value="{{$consulta->antecedentes_familiares}}" type="text" class="form-control" name="AntecedentesFamiliares"><br>
 					</div>
+		
+		</div>
+	</div>
+	<br><div class="jumbotron" style="background: #8DC0E9" >
+
+				<div P ALIGN=left>
 					<div class="form-group, col-xs-12">
-						<label for="NotaMedica">Nota Medica:</label> <br><br>
+						<h4><label for="NotaMedica"><font color="White" face="verdana"><b>Nota Medica</b></font></label></h4>
 					</div>
+				</div>
+		</div>
+	<div style="width:1200px;height:350px;border:3px solid #8DC0E9;">
+		<div P ALIGN=left>
 					<div class="form-group, col-xs-12">
 						<label for="Padecimiento">Padecimiento:</label>
 						<input value="{{$consulta->padecimientos}}" type="text" class="form-control" name="Padecimiento"><br>
@@ -92,7 +118,8 @@
 						<label for="Tratamiento">Tratamiento:</label>
 						<input value="{{$consulta->tratamiento}}" type="text" class="form-control" name="Tratamiento"><br>
 					</div>
-					
+		</div>
+	</div>
 					<div class="col-xs-12">
 					<input type="submit" class="btn btn-primary">
 					<a href="{{url('/mostrarConsulta')}}" class="btn btn-danger">Cancelar</a>
@@ -105,4 +132,5 @@
 				        autoclose: true
 				   			 });
 				</script>
+</center>
 @stop
