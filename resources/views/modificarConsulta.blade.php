@@ -1,14 +1,14 @@
 @extends('master')
 @section('encabezado')
-<h1>Registrar Consulta</h1>
+<h1>Modificar Consulta</h1>
 @stop
 @section('contenido')
-				<form action="{{url('/guardarConsulta')}}" method="POST">
+				<form action="{{url('/actualizarConsulta')}}/{{$consulta->id}}" method="POST">
 					<input type="hidden" name="_token" value="{{csrf_token()}}">
 					<div class="form-group, col-xs-6">
 						<label for="FechaConsulta">Fecha: </label>
 						<div class="input-group">
-                                <input type="text" class="form-control datepicker" name="FechaConsulta" >
+                                <input  value="{{$consulta->fecha}}" type="text" class="form-control datepicker" name="FechaConsulta" >
                                 <div class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar "></span>
                                 </div>
@@ -16,7 +16,7 @@
 					<br></div>
 					<div class="form-group, col-xs-6" >
 						<label for="Hora">Hora:</label>
-						<input type="text" class="form-control" name="Hora">
+						<input value="{{$consulta->hora}}" type="text" class="form-control" name="Hora">
 					</div>
 					<div class="form-group, col-xs-12">
 						<label for="Nombre"><b>Paciente:</b></label>
@@ -41,56 +41,56 @@
 					<br></div>
 					<div class="form-group, col-xs-4">
 						<label for="Peso">Peso:</label>
-						<input type="text" class="form-control" name="Peso">
+						<input value="{{$consulta->peso}}" type="text" class="form-control" name="Peso">
 					<br></div>
 				
 					<div class="form-group, col-xs-4">
 						<label for="Altura">Altura:</label>
-						<input type="text" class="form-control" name="Altura">
+						<input value="{{$consulta->altura}}" type="text" class="form-control" name="Altura">
 					<br></div>
 					<div class="form-group, col-xs-4">
 						<label for="IMC">IMC:</label>
-						<input type="text" class="form-control" name="IMC">
+						<input value="{{$consulta->IMC}}" type="text" class="form-control" name="IMC">
 					</div>
 					<div class="form-group, col-xs-6">
 						<label for="Temperatura">Temperatura Corporal:</label>
-						<input type="text" class="form-control" name="Temperatura">
+						<input value="{{$consulta->temperatura_corporal}}" type="text" class="form-control" name="Temperatura">
 					<br></div>
 					<div class="form-group, col-xs-6">
 						<label for="Presion">Presion:</label>
-						<input type="text" class="form-control" name="Presion">
+						<input value="{{$consulta->presion}}" type="text" class="form-control" name="Presion">
 					<br></div>
 
 					<div class="form-group, col-xs-6">
 						<label for="FrecuenciaRespiratoria">Frecuencia Respiratoria:</label>
-						<input type="text" class="form-control" ID="Seguro" name="FrecuenciaRespiratoria">
+						<input value="{{$consulta->frecuencia_respiratoria}}" type="text" class="form-control" ID="Seguro" name="FrecuenciaRespiratoria">
 					</div>
 					<div class="form-group, col-xs-6">
 						<label for="FrecuenciaCardiaca">Frecuencia Cardiaca:</label>
-						<input type="text" class="form-control" name="FrecuenciaCardiaca">
+						<input value="{{$consulta->frecuencia_cardiaca}}" type="text" class="form-control" name="FrecuenciaCardiaca">
 					<br></div>
 					<div class="form-group, col-xs-12">
 						<label for="AntecedentesFamiliares">Antecedentes Familiares:</label>
-						<input type="text" class="form-control" name="AntecedentesFamiliares"><br>
+						<input value="{{$consulta->antecedentes_familiares}}" type="text" class="form-control" name="AntecedentesFamiliares"><br>
 					</div>
 					<div class="form-group, col-xs-12">
 						<label for="NotaMedica">Nota Medica:</label> <br><br>
 					</div>
 					<div class="form-group, col-xs-12">
 						<label for="Padecimiento">Padecimiento:</label>
-						<input type="text" class="form-control" name="Padecimiento"><br>
+						<input value="{{$consulta->padecimientos}}" type="text" class="form-control" name="Padecimiento"><br>
 					</div>
 					<div class="form-group, col-xs-12">
 						<label for="Enfermedad">Clasificacion de Enfermedad:</label>
-						<input type="text" class="form-control" name="Enfermedad"><br>
+						<input value="{{$consulta->clasificacion}}" type="text" class="form-control" name="Enfermedad"><br>
 					</div>
 					<div class="form-group, col-xs-12">
 						<label for="Diagnostico">Diagnostico:</label>
-						<input type="text" class="form-control" name="Diagnostico"><br>
+						<input value="{{$consulta->diagnostico}}" type="text" class="form-control" name="Diagnostico"><br>
 					</div>
 					<div class="form-group, col-xs-12">
 						<label for="Tratamiento">Tratamiento:</label>
-						<input type="text" class="form-control" name="Tratamiento"><br>
+						<input value="{{$consulta->tratamiento}}" type="text" class="form-control" name="Tratamiento"><br>
 					</div>
 					
 					<div class="col-xs-12">
