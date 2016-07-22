@@ -21,11 +21,11 @@
 					<div class="form-group, col-xs-12">
 						<label for="Nombre"><b>Paciente:</b></label>
 							<select class="form-control" name="Nombre" id="">
-								<option value=""><font color="White">Seleccione Un Paciente</font></option>
-								@foreach($pacientes as $p)
-								<option value="{{$p->id}}">{{$p->nombre}}</option>
-								@endforeach
-							</select>					
+									<option value="">Seleccione un paciente</option>
+									@foreach($pacientes as $c)
+									<option value="{{$c->id}}">{{$c->nombre}}</option>
+									@endforeach
+								</select>				
 					</div>
 					<div class="form-group, col-xs-12">
 						<label for="Doctor"><b>Doctor:</b></label>

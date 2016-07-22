@@ -7,11 +7,21 @@
 					<input type="hidden" name="_token" value="{{csrf_token()}}">
 					<div class="form-group, col-xs-6">
 						<label for="Nombre">Nombre </label>
-						<input type="text" class="form-control" name="Nombre" value="">
+						<select class="form-control" name="Nombre" id="">
+								<option value=""><font color="White">Seleccione Un Paciente</font></option>
+								@foreach($pacientes as $p)
+								<option value="{{$p->id}}">{{$p->nombre}}</option>
+								@endforeach
+							</select>		
 					<br></div>
 					<div class="form-group, col-xs-6" >
 						<label for="Fecha">Fecha</label>
-						<input type="text" class="form-control" name="Fecha"><br>
+						<div class="input-group">
+                                <input type="text" class="form-control datepicker" name="Fecha" >
+                                <div class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar "></span>
+                                </div>
+                     <br> <br>  </div> 
 					</div>
 					<div class="form-group, col-xs-6">
 						<label for="Hora">Hora</label>
@@ -34,4 +44,11 @@
 					<a href="{{url('/')}}" class="btn btn-danger">Cancelar</a>
 					</div>
 				</form>
+				<script>
+				    	$('.datepicker').datepicker({
+				        format: "yyyy/mm/dd",
+				        language: "es",
+				        autoclose: true
+				   			 });
+				</script>
 @stop
