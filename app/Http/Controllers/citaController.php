@@ -54,8 +54,10 @@ class citaController extends Controller
 
 	}
 	public function modificarCita($id){
+		$administradores= Administrador::all();
+    	$pacientes= Paciente::all();
 		$cita=Cita::find($id);
-		return view('modificarCita', compact('cita'));
+		return view('modificarCita', compact('cita', 'administradores', 'pacientes'));
 	}
 	public function actualizarCita( $id ,CitaRequest $request){
 		
