@@ -45,6 +45,12 @@ Route::get('/editarPaciente/{id}','ConsultorioController@editarPaciente');
 Route::post('/actualizarPaciente/{id}', 'ConsultorioController@actualizarPaciente');
 
 
+Route::get('/registrarConsulta', 'ConsultorioController@registrarConsulta');
+Route::post('/guardarConsulta','ConsultorioController@guardarConsulta');
+
+
+Route::get('/registrarReceta', 'ConsultorioController@registrarReceta');
+Route::post('/guardarReceta','ConsultorioController@guardarReceta');
 
 
 /*Llamadas al controlador Auth*/

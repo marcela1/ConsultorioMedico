@@ -12,15 +12,13 @@
 					<div style="width:1200px;height:685px;border:3px solid #8DC0E9;">
 
 					<div class="form-group, col-xs-12">
-						<label for="FechaRegistro"><P ALIGN=left><b>Fecha de Registro:</b></label>
-						
+						<label for="FechaRegistro"><P ALIGN=left><b>Fecha de Registro:</b></label>						
 							<div class="input-group">
                                 <input type="text" class="form-control datepicker" name="FechaRegistro" >
                                 <div class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar "></span>
                                 </div>
-                            </div>
-                            
+                            </div>                            
 					<br></div>
 					<div P ALIGN=left>
 					<div class="form-group, col-xs-4" >
@@ -168,11 +166,11 @@
 					});
 				</script>
 				<script>
-    	$('.datepicker').datepicker({
-        format: "yyyy/mm/dd",
-        language: "es",
-        autoclose: true
-    });
-</script>
+				    	$('.datepicker').datepicker({
+				        format: "yyyy/mm/dd",
+				        language: "es",
+				        autoclose: true
+				   			 });
+				</script>
 </center>
 @stop
