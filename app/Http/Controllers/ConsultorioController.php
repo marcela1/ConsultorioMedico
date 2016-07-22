@@ -121,7 +121,7 @@ class ConsultorioController extends Controller
       $consultas ->diagnostico = $request->input('Diagnostico');
       $consultas ->tratamiento= $request -> input('Tratamiento');
       $consultas->save();
-     return Redirect('/');
+     return Redirect('/registrarReceta');
     }
 
     public function registrarReceta(){

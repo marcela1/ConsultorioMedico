@@ -27,9 +27,14 @@
 					<div P ALIGN=left>
 					<div class="form-group, col-xs-12">
 						<label for="id_paciente"><b>ID Paciente:</b></label>
-						 <input value="{{$cita->id_paciente}}"type="text" class="form-control" name="id_paciente" >
-
+						 <select class="form-control" name="id_paciente" id="">
+						 	<option value="{{$cita->id_paciente}}">{{$cita->id_paciente}}</option>
+						 	@foreach($pacientes as $p)
+							<option value="{{$p->id}}">{{$p->nombre}}-{{$p->id}}</option>
+							@endforeach
+						 </select>
 					</div>
+				
 					<div class="form-group, col-xs-12">
 						<label for="id_administrador"><b>ID Administrador:</b></label>
 						<input value="{{$cita->id_administrador}}"type="text" class="form-control" name="id_administrador" >
