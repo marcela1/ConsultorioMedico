@@ -53,8 +53,10 @@ Route::get('/registrarReceta', 'ConsultorioController@registrarReceta');
 Route::post('/guardarReceta','ConsultorioController@guardarReceta');
 
 
-/*Llamadas al controlador Auth*/
-//Route::get('login', 'AuthController@authenticate'); // Mostrar login
-//Route::post('login', 'AuthController@postLogin'); // Verificar datos
-//Route::get('logout', 'AuthController@logOut'); // Finalizar sesión
- 
+Route::get('/mostrarConsulta', 'consultaController@mostrarConsulta');
+Route::get('/eliminarConsulta/{id}', 'consultaController@eliminarConsulta');
+Route::get('/modificarConsulta/{id}','consultaController@modificarConsulta');
+Route::post('/actualizarConsulta/{id}','consultaController@actualizarConsulta');
+Route::get('/mostrarHistorial', 'historialController@mostrarHistorial');
+
+

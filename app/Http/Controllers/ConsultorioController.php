@@ -138,6 +138,6 @@ class ConsultorioController extends Controller
       $recetas ->tratamiento= $request -> input('Tratamiento');
       $recetas ->id_administrador = $request->input('Doctor');
       $recetas->save();
-     return Redirect('/');
+     return Redirect('/mostrarConsulta');
     }
 }
