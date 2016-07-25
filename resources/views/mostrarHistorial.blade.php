@@ -12,7 +12,7 @@
 					
 					<div class="form-group">
 						<label for="">Pacientes</label>
-						<select class="form-control"name="usuarios" id="">
+						<select class="form-control"name="pacientes" id="">
 							@foreach($pacientes as $p)
 							<option value="{{$p->id}}">{{$p->nombre}}</option>
 							@endforeach
@@ -27,6 +27,7 @@
 					<thead>
 						<tr class="success">
 							<th>ID</th>
+							<th>Paciente</th>
 							<th>Fecha de Consulta</th>
 							<th>Hora</th>
 							<th>Enfermedad</th>

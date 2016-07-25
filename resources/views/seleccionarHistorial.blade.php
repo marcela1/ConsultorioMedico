@@ -10,7 +10,7 @@
 					<input type="hidden" name="_token" value="{{csrf_token() }}">
 					<div class="form-group">
 						<label for="">Paciente</label>
-						<select class="form-control"name="historial" id="">
+						<select class="form-control"name="pacientes" id="">
 							@foreach($pacientes as $p)
 							<option value="{{$p->id}}">{{$p->nombre}}</option>
 							@endforeach
@@ -26,6 +26,7 @@
 					<thead>
 						<tr class="success">
 							<th>ID</th>
+							<th>Paciente</th>
 							<th>Fecha de Consulta</th>
 							<th>Hora</th>
 							<th>Enfermedad</th>
@@ -36,9 +37,10 @@
 						</tr>
 					</thead>
 					<tbody>
-						@foreach($historial as $h)
+						@foreach($consulta as $h)
 						<tr>
 							<td>{{$h->id}}</td>
+							<td>{{$h->np}}</td>
 							<td>{{$h->fecha}}</td>
 							<td>{{$h->hora}}</td>
 							<td>{{$h->diagnostico}}</td>

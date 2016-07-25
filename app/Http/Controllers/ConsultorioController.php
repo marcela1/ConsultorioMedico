@@ -105,7 +105,7 @@ class ConsultorioController extends Controller
      public function guardarConsulta(Request $request){
       $consultas=Consulta::all();
       $consultas = new Consulta(); 
-     
+      
       $consultas ->fecha = $request->input('FechaConsulta');
       $consultas ->hora= $request -> input('Hora');
       $consultas ->id_paciente = $request->input('Nombre');
@@ -124,10 +124,7 @@ class ConsultorioController extends Controller
       $consultas ->tratamiento= $request -> input('Tratamiento');
      
       $consultas->save();
-     
-     
-      
-
+    
 
      return Redirect('/registrarReceta');
     }
