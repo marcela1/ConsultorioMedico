@@ -58,5 +58,8 @@ Route::get('/eliminarConsulta/{id}', 'consultaController@eliminarConsulta');
 Route::get('/modificarConsulta/{id}','consultaController@modificarConsulta');
 Route::post('/actualizarConsulta/{id}','consultaController@actualizarConsulta');
 Route::get('/mostrarHistorial', 'historialController@mostrarHistorial');
+Route::post('/seleccionarHistorial','historialController@seleccionarHistorial');
+Route::post('/actualizarProyectosRequisitos/{id}','ejemploController@actualizarProyectosRequisitos');
+Route::get('/pdfProyectosRequisitos/{id}','ejemploController@pdfProyectosRequisitos');
 
 
