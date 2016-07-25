@@ -27,21 +27,11 @@
 					</div>
 					<div class="form-group, col-xs-12">
 						<label for="Nombre"><b>Paciente:</b></label>
-							<select class="form-control" name="Nombre" id="">
-									<option value="">Seleccione un paciente</option>
-									@foreach($pacientes as $c)
-									<option value="{{$c->id}}">{{$c->nombre}}</option>
-									@endforeach
-								</select>				
+						<input value="{{$consulta->nombre}}" type="text" class="form-control" name="Nombre">			
 					</div>
 					<div class="form-group, col-xs-12">
 						<label for="Doctor"><b>Doctor:</b></label>
-							<select class="form-control" name="Doctor" id="">
-								<option value=""><font color="White">Seleccione Un Paciente</font></option>
-								@foreach($administradores as $a)
-								<option value="{{$a->id}}">{{$a->nombre}}</option>
-								@endforeach
-							</select>	<br>				
+						<input value="{{$consulta->doc}}" type="text" class="form-control" name="Doctor">		
 					</div>
 		</div>
 	</div>
