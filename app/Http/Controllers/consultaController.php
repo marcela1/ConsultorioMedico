@@ -32,10 +32,13 @@ class consultaController extends Controller
 		return Redirect('/mostrarConsulta');
 	}
 	public function modificarConsulta($id){
-		$consulta=Consulta::find($id);
-		$administradores= Administrador::all();
-        $pacientes= Paciente::all();
-		return view('modificarConsulta', compact('consulta', 'administradores', 'pacientes'));
+		$consulta=DB::table('consulta')
+		->join('pacientes' , 'consulta.id_paciente' , '=' , 'pacientes.id')
+		->join('administradores', 'consulta.id_administrador' ,'=' , 'administradores.id')
+		->select('pacientes.nombre','administradores.nombre as doc')
+		->get();
+        $consulta=Consulta::find($id);
+		return view('modificarConsulta', compact('consulta'));
 	}
 		public function actualizarConsulta( $id ,Request $request){
 		

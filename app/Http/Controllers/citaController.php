@@ -53,9 +53,12 @@ class citaController extends Controller
 		return Redirect('/mostrarCita');
 
 	}
+
+	
 	public function modificarCita($id){
 		$administradores= Administrador::all();
     	$pacientes= Paciente::all();
+    	
 		$cita=Cita::find($id);
 		return view('modificarCita', compact('cita', 'administradores', 'pacientes'));
 	}

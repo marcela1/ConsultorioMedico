@@ -12,13 +12,24 @@
 				<form action="{{url('/guardarReceta')}}" method="POST">
 					<input type="hidden" name="_token" value="{{csrf_token()}}">
 					<div class="form-group, col-xs-6">
-						<label for="Nombre"><b>Nombre:</b></label>
-						<input type="text" class="form-control" name="Nombre" value="">
+
+						<label for="Nombre">Nombre </label>
+						<select class="form-control" name="Nombre" id="">
+								<option value=""><font color="White">Seleccione Un Paciente</font></option>
+								@foreach($pacientes as $p)
+								<option value="{{$p->id}}">{{$p->nombre}}</option>
+								@endforeach
+							</select>		
 					<br></div>
 					<div class="form-group, col-xs-6" >
-						<label for="Fecha"><b>Fecha:</b></label>
-						<input type="text" class="form-control" name="Fecha"><br>
-					</div>
+						<label for="Fecha">Fecha</label>
+						<div class="input-group">
+                                <input type="text" class="form-control datepicker" name="Fecha" >
+                                <div class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar "></span>
+                                </div>
+                     <br> <br>  </div> 
+                 </div>
 					<div class="form-group, col-xs-6">
 						<label for="Hora"><b>Hora:</b></label>
 						<input type="text" class="form-control" name="Hora"><br>
@@ -43,6 +54,16 @@
 					</div>
 				</form>
 
+				<script>
+				    	$('.datepicker').datepicker({
+				        format: "yyyy/mm/dd",
+				        language: "es",
+				        autoclose: true
+				   			 });
+				</script>
+
+
 
 </center>
+
 @stop

@@ -130,7 +130,9 @@ class ConsultorioController extends Controller
     }
 
     public function registrarReceta(){
-      return view('registrarReceta');
+      $consulta=Consulta::all();
+        $pacientes =Paciente::all();
+      return view('registrarReceta', compact('consulta','pacientes'));
     }
 
     public function guardarReceta(Request $request){
