@@ -50,6 +50,8 @@
             <li><a href="{{url('/mostrarHistorial')}}">Historial Clinico</a></li>
             <li class="divider"></li>
             <li><a href="{{url('/registrarReceta')}}">Registrar Receta</a></li>
+            <li><a href="{{url('/registrarPago')}}">Registrar Pago</a></li>
+             <li><a href="{{url('/mostrarPago')}}">Pagos Realizados</a></li>
             <li class="divider"></li>
             <li><a href="#">One more separated link</a></li>
           </ul>
