@@ -283,7 +283,6 @@ class ComposerStaticInit8361b0f193e5001672bdfdfd274b5105
         'App\\Events\\Event' => __DIR__ . '/../..' . '/app/Events/Event.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Historial' => __DIR__ . '/../..' . '/app/Historial.php',
-
         'App\\Http\\Controllers\\Auth\\AuthController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/AuthController.php',
         'App\\Http\\Controllers\\Auth\\PasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/PasswordController.php',
         'App\\Http\\Controllers\\ConsultorioController' => __DIR__ . '/../..' . '/app/Http/Controllers/ConsultorioController.php',
@@ -294,6 +293,7 @@ class ComposerStaticInit8361b0f193e5001672bdfdfd274b5105
         'App\\Http\\Controllers\\consultaController' => __DIR__ . '/../..' . '/app/Http/Controllers/consultaController.php',
         'App\\Http\\Controllers\\historialController' => __DIR__ . '/../..' . '/app/Http/Controllers/historialController.php',
         'App\\Http\\Controllers\\pagoController' => __DIR__ . '/../..' . '/app/Http/Controllers/pagoController.php',
+        'App\\Http\\Controllers\\pdfController' => __DIR__ . '/../..' . '/app/Http/Controllers/pdfController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
@@ -311,7 +311,7 @@ class ComposerStaticInit8361b0f193e5001672bdfdfd274b5105
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'App\\Receta' => __DIR__ . '/../..' . '/app/Receta.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
-
+        'App\\consulta_receta' => __DIR__ . '/../..' . '/app/consulta_receta.php',
         'Attribute_Translator' => __DIR__ . '/..' . '/dompdf/dompdf/include/attribute_translator.cls.php',
         'Barryvdh\\DomPDF\\Facade' => __DIR__ . '/..' . '/barryvdh/laravel-dompdf/src/Facade.php',
         'Barryvdh\\DomPDF\\PDF' => __DIR__ . '/..' . '/barryvdh/laravel-dompdf/src/PDF.php',

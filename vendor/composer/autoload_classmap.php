@@ -17,10 +17,6 @@ return array(
     'App\\Events\\Event' => $baseDir . '/app/Events/Event.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Historial' => $baseDir . '/app/Historial.php',
-<<<<<<< HEAD
-    'App\\Http\\Controllers\\AuthController' => $baseDir . '/app/Http/Controllers/AuthController.php',
-=======
->>>>>>> ae08da67d29904f68ed0bcec7719ee2be2e11891
     'App\\Http\\Controllers\\Auth\\AuthController' => $baseDir . '/app/Http/Controllers/Auth/AuthController.php',
     'App\\Http\\Controllers\\Auth\\PasswordController' => $baseDir . '/app/Http/Controllers/Auth/PasswordController.php',
     'App\\Http\\Controllers\\ConsultorioController' => $baseDir . '/app/Http/Controllers/ConsultorioController.php',
@@ -31,6 +27,7 @@ return array(
     'App\\Http\\Controllers\\consultaController' => $baseDir . '/app/Http/Controllers/consultaController.php',
     'App\\Http\\Controllers\\historialController' => $baseDir . '/app/Http/Controllers/historialController.php',
     'App\\Http\\Controllers\\pagoController' => $baseDir . '/app/Http/Controllers/pagoController.php',
+    'App\\Http\\Controllers\\pdfController' => $baseDir . '/app/Http/Controllers/pdfController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'App\\Http\\Middleware\\Authenticate' => $baseDir . '/app/Http/Middleware/Authenticate.php',
     'App\\Http\\Middleware\\EncryptCookies' => $baseDir . '/app/Http/Middleware/EncryptCookies.php',
@@ -48,10 +45,7 @@ return array(
     'App\\Providers\\RouteServiceProvider' => $baseDir . '/app/Providers/RouteServiceProvider.php',
     'App\\Receta' => $baseDir . '/app/Receta.php',
     'App\\User' => $baseDir . '/app/User.php',
-<<<<<<< HEAD
     'App\\consulta_receta' => $baseDir . '/app/consulta_receta.php',
-=======
->>>>>>> ae08da67d29904f68ed0bcec7719ee2be2e11891
     'Attribute_Translator' => $vendorDir . '/dompdf/dompdf/include/attribute_translator.cls.php',
     'Barryvdh\\DomPDF\\Facade' => $vendorDir . '/barryvdh/laravel-dompdf/src/Facade.php',
     'Barryvdh\\DomPDF\\PDF' => $vendorDir . '/barryvdh/laravel-dompdf/src/PDF.php',
