@@ -10,9 +10,12 @@
 					<input type="hidden" name="_token" value="{{csrf_token() }}">
 					<div class="form-group">
 						<label for="">Paciente</label>
-						<select class="form-control"name="pacientes" id="">
+						<select class="form-control" name="pacientes" id="">
 							@foreach($pacientes as $p)
 							<option value="{{$p->id}}">{{$p->nombre}}</option>
+
+				
+							
 							@endforeach
 						</select>
 						<input class="btn btn-primary" type="submit" value="Mostrar">
@@ -47,7 +50,7 @@
 							<td>{{$h->tratamiento}}</td>
 							<td>{{$h->doc }} {{$h->ap}} {{$h->am}}</td>
 							<td>
-							<a href="{{ url('/pdfHistorial')}}/{{$h->id}}"><span class="glyphicon glyphicon-file" aria-hidden="true"></span></a>
+							<a href="{{ url('/pdfHistorial')}}/{{$h->pid}}"><span class="glyphicon glyphicon-file" aria-hidden="true"></span></a>
 							</td>
 							
 						</tr>
