@@ -47,7 +47,7 @@
 							<td>{{$h->tratamiento}}</td>
 							<td>{{$h->doc }} {{$h->ap}} {{$h->am}}</td>
 							<td>
-							<a href="{{ url('/pdfReceta')}}/{{$h->id}}"><span class="glyphicon glyphicon-file" aria-hidden="true"></span></a>
+							<a href="{{ url('/pdfHistorial')}}/{{$h->id}}"><span class="glyphicon glyphicon-file" aria-hidden="true"></span></a>
 							</td>
 							
 						</tr>
