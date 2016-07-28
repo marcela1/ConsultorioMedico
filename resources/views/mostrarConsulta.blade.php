@@ -47,7 +47,7 @@
 								<a class="btn btn-primary btn-xs" href="{{url('/modificarConsulta')}}/{{$c->id}}"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Editar</a>
 							</td>
 							<td>
-							<a href="{{ url('/pdfReceta')}}/{{$c->id}}"><span class="glyphicon glyphicon-file" aria-hidden="true"></span></a>
+							<a href="{{ url('/PDFReceta')}}/{{$c->id}}"><span class="glyphicon glyphicon-file" aria-hidden="true"></span></a>
 							</td>
 							
 						</tr>

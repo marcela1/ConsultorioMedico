@@ -15,16 +15,13 @@
 
 						<label for="Nombre">Nombre </label>
 						<select class="form-control" name="Nombre" id="">
-								<option value=""><font color="White">Seleccione Un Paciente</font></option>
-								@foreach($pacientes as $p)
-								<option value="{{$p->id}}">{{$p->nombre}}</option>
-								@endforeach
-							</select>		
+								<option value="{{$consulta->id_paciente}}"><font color="White">{{$consulta->nombre}}</font></option>
+					    </select>
 					<br></div>
 					<div class="form-group, col-xs-6" >
 						<label for="Fecha">Fecha</label>
 						<div class="input-group">
-                                <input type="text" class="form-control datepicker" name="Fecha" >
+                                <input type="text" class="form-control datepicker" name="Fecha" value="{{$consulta->fecha}}">
                                 <div class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar "></span>
                                 </div>
@@ -32,20 +29,20 @@
                  </div>
 					<div class="form-group, col-xs-6">
 						<label for="Hora"><b>Hora:</b></label>
-						<input type="text" class="form-control" name="Hora"><br>
+						<input type="text" class="form-control" name="Hora" value="{{$consulta->hora}}"><br>
 					</div>
 					<div class="form-group, col-xs-6">
 						<label for="Peso"><b>Peso:</b></label>
-						<input type="text" class="form-control" name="Peso">
+						<input type="text" class="form-control" name="Peso" value="{{$consulta->peso}}">
 					<br></div>
 					
 					<div class="form-group, col-xs-12">
 						<label for="Tratamiento"><b>Tratamineto:</b></label>
-						<textarea row="50" col="250" name="Tratamiento" class="form-control"></textarea>
+						<input name="Tratamiento" class="form-control" value="{{$consulta->tratamiento}}">
 					<br></div>
 	</div>
 	 </div>
-						<input type="text" class="form-control" name="Doctor" value="1" style="visibility:hidden">
+						<input type="text" class="form-control" name="Doctor" value="{{$consulta->id_administrador}}" style="visibility:hidden">
    
 					<div class="col-xs-12">
 					<a href="{{url('/')}}" class="btn btn-info">Imprimir Receta</a>

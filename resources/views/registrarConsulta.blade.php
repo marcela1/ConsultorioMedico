@@ -36,7 +36,7 @@
 					<div class="form-group, col-xs-12">
 						<label for="Doctor"><b>Doctor:</b></label>
 							<select class="form-control" name="Doctor" id="">
-								<option value=""><font color="White">Seleccione Un Paciente</font></option>
+								<option value=""><font color="White">Seleccione Un Doctor</font></option>
 								@foreach($administradores as $a)
 								<option value="{{$a->id}}">{{$a->nombre}}</option>
 								@endforeach
