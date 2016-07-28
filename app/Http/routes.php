@@ -68,3 +68,4 @@ Route::get('/mostrarPago', 'pagoController@mostrarPago');
 Route::get('/eliminarPago/{id}', 'pagoController@eliminarPago');
 Route::get('/modificarPago/{id}','pagoController@modificarPago');
 Route::post('/actualizarPago/{id}','pagoController@actualizarPago');
+
