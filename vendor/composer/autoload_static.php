@@ -283,10 +283,7 @@ class ComposerStaticInit8361b0f193e5001672bdfdfd274b5105
         'App\\Events\\Event' => __DIR__ . '/../..' . '/app/Events/Event.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Historial' => __DIR__ . '/../..' . '/app/Historial.php',
-<<<<<<< HEAD
-        'App\\Http\\Controllers\\AuthController' => __DIR__ . '/../..' . '/app/Http/Controllers/AuthController.php',
-=======
->>>>>>> ae08da67d29904f68ed0bcec7719ee2be2e11891
+
         'App\\Http\\Controllers\\Auth\\AuthController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/AuthController.php',
         'App\\Http\\Controllers\\Auth\\PasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/PasswordController.php',
         'App\\Http\\Controllers\\ConsultorioController' => __DIR__ . '/../..' . '/app/Http/Controllers/ConsultorioController.php',
@@ -314,10 +311,7 @@ class ComposerStaticInit8361b0f193e5001672bdfdfd274b5105
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'App\\Receta' => __DIR__ . '/../..' . '/app/Receta.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
-<<<<<<< HEAD
-        'App\\consulta_receta' => __DIR__ . '/../..' . '/app/consulta_receta.php',
-=======
->>>>>>> ae08da67d29904f68ed0bcec7719ee2be2e11891
+
         'Attribute_Translator' => __DIR__ . '/..' . '/dompdf/dompdf/include/attribute_translator.cls.php',
         'Barryvdh\\DomPDF\\Facade' => __DIR__ . '/..' . '/barryvdh/laravel-dompdf/src/Facade.php',
         'Barryvdh\\DomPDF\\PDF' => __DIR__ . '/..' . '/barryvdh/laravel-dompdf/src/PDF.php',
