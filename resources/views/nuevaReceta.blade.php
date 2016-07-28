@@ -9,19 +9,22 @@
 <center>
 	<div style="width:1200px;height:300px;border:3px solid #8DC0E9;">
 		<div P ALIGN=left>
-				<form action="{{url('/guardarReceta')}}" method="POST">
+				<form action="{{url('/guardarNuevaReceta')}}" method="POST">
 					<input type="hidden" name="_token" value="{{csrf_token()}}">
 					<div class="form-group, col-xs-6">
 
 						<label for="Nombre">Nombre </label>
-						<select class="form-control" name="Nombre" id="">
-								<option value="{{$consulta->id_paciente}}"><font color="White">{{$consulta->nombre}}</font></option>
-					    </select>
+						<select class="form-control" name="Nombre" >
+								<option value=""><font color="White">Seleccione un paciente</font></option>
+								@foreach($pacientes as $p)
+								<option value="{{$p->id}}">{{$p->nombre}}</option>
+								@endforeach
+							</select>		
 					<br></div>
 					<div class="form-group, col-xs-6" >
 						<label for="Fecha">Fecha</label>
 						<div class="input-group">
-                                <input type="text" class="form-control datepicker" name="Fecha" value="{{$consulta->fecha}}">
+                                <input type="text" class="form-control datepicker" name="Fecha" >
                                 <div class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar "></span>
                                 </div>
@@ -29,21 +32,31 @@
                  </div>
 					<div class="form-group, col-xs-6">
 						<label for="Hora"><b>Hora:</b></label>
-						<input type="text" class="form-control" name="Hora" value="{{$consulta->hora}}"><br>
+						<input type="text" class="form-control" name="Hora" ><br>
 					</div>
 					<div class="form-group, col-xs-6">
 						<label for="Peso"><b>Peso:</b></label>
-						<input type="text" class="form-control" name="Peso" value="{{$consulta->peso}}">
+						<input type="text" class="form-control" name="Peso" >
 					<br></div>
 					
-					<div class="form-group, col-xs-12">
+					<div class="form-group, col-xs-6">
 						<label for="Tratamiento"><b>Tratamineto:</b></label>
-						<input name="Tratamiento" class="form-control" value="{{$consulta->tratamiento}}">
+						<input name="Tratamiento" type="Text" class="form-control" >
 					<br></div>
+					<div></div>
+					<div class="form-group, col-xs-6">
+						<label for="Doctor"><b>Doctor:</b></label>
+						<select class="form-control" name="Doctor" >
+								<option value=""><font color="White">Seleccione un Doctor</font></option>
+								@foreach($administradores as $a)
+								<option value="{{$a->id}}">{{$a->nombre}}</option>
+								@endforeach
+							</select>	
+					<br></div>
+   
 	</div>
 	 </div>
-						<input type="text" class="form-control" name="Doctor" value="{{$consulta->id_administrador}}" style="visibility:hidden">
-   
+						
 					<div class="col-xs-12">
 					<a href="{{url('/')}}" class="btn btn-info">Imprimir Receta</a>
 					<input type="submit" class="btn btn-primary">

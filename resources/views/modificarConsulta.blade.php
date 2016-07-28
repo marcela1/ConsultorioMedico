@@ -26,8 +26,13 @@
 						<input value="{{$consulta->hora}}" type="text" class="form-control" name="Hora">
 					</div>
 					<div class="form-group, col-xs-12">
-						<label for="Nombre"><b>Paciente:</b></label>
-						<input value="{{$consulta->nombre}}" type="text" class="form-control" name="Nombre">			
+						<label for="Nombre"><b>Paciente:</b></label>						
+					<select class="form-control" name="Nombre" id="">
+								<option value=""><font color="White">{{$consulta->nombre}}</font></option>
+								@foreach($pacientes as $p)
+								<option value="{{$p->id}}">{{$p->nombre}}</option>
+								@endforeach
+							</select>				
 					</div>
 					<div class="form-group, col-xs-12">
 						<label for="Doctor"><b>Doctor:</b></label>

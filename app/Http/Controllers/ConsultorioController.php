@@ -12,6 +12,8 @@ use App\Administrador;
 use App\Receta;
 use App\Consulta;
 use App\Historial;
+use App\consulta_receta;
+use PDF;
 
 class ConsultorioController extends Controller
 {
@@ -130,9 +132,14 @@ class ConsultorioController extends Controller
     }
 
     public function registrarReceta(){
-      $consulta=Consulta::all();
-        $pacientes =Paciente::all();
-      return view('registrarReceta', compact('consulta','pacientes'));
+   $prueba=Consulta::all()->last();
+   $consulta=DB::table('consulta as c')
+    ->where('c.id','=', $prueba->id)   
+    ->join('pacientes as p' , 'c.id_paciente' , '=' , 'p.id')
+    ->join('administradores as a', 'c.id_administrador' ,'=' , 'a.id')
+    ->select('c.id','c.id_paciente','c.id_administrador','p.nombre','a.nombre as doc','c.fecha','c.hora','c.peso','c.tratamiento')
+    ->first();
+    return view('registrarReceta', compact('consulta'));
     }
 
     public function guardarReceta(Request $request){
@@ -146,5 +153,41 @@ class ConsultorioController extends Controller
       $recetas ->id_administrador = $request->input('Doctor');
       $recetas->save();
      return Redirect('/mostrarConsulta');
+    }
+
+     public function nuevaReceta(){
+      $administradores= Administrador::all();
+      $pacientes= Paciente::all();
+      
+    return view('nuevaReceta', compact('pacientes','administradores'));
+    }
+
+    public function guardarNuevaReceta(Request $request){
+      $recetas=Receta::all();
+      $recetas = new Receta();
+      $recetas ->fecha = $request->input('Fecha');
+      $recetas ->hora= $request -> input('Hora');
+      $recetas ->id_paciente = $request->input('Nombre');
+      $recetas ->peso= $request -> input('Peso');
+      $recetas ->tratamiento= $request -> input('Tratamiento');
+      $recetas ->id_administrador = $request->input('Doctor');
+      $recetas->save();
+     return Redirect('/mostrarConsulta');
+    }
+
+     public function PDFReceta($id){
+      $lista=DB::table('consulta_receta')->where('id_consulta','=',$id)->lists('id_receta');
+      $recetas=DB::table('receta')
+          ->whereIn('id', $lista)
+          ->orderBy('id','asc')
+          ->get();
+
+      $consultas= Consulta::find($id);
+
+      $vista=view('PDFReceta', compact('recetas','consultas'));
+      $dompdf=\App::make('dompdf.wrapper');
+      $dompdf->loadHTML($vista);
+      return $dompdf->stream();
+      
     }
 }
