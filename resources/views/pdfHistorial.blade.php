@@ -3,15 +3,11 @@
 <head>
 
 	<p align="center"><img src="imagenes/historial.jpg" WIDTH=800 HEIGHT=150 ></p>
-	<div class="jumbotron">
-
 
 </head>
 <body>
 	<h2 ><font color="#1364BB"><b>Informacion del Usuario</b> </h2>
-
-	<b>
-	<hr>	
+	
 	
 <table width="100%"  border="1" cellspacing="0" cellpadding="0" valign="middle">
 		<tr class="success">
