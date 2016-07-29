@@ -11,6 +11,7 @@ use App\Http\Requests\CitaRequest;
 use App\Historial;
 use App\Receta;
 use App\Consulta;
+use App\Pago;
 class pdfController extends Controller
 {
  
@@ -37,7 +38,7 @@ class pdfController extends Controller
 	
 	}
 
-	public function pdfHistorial($id){
+	public function pdfPago($id){
 	$pacientes=Paciente::all();
 	$consulta=Consulta::all();
 
@@ -52,7 +53,7 @@ class pdfController extends Controller
 		->orderBy('consulta.hora', 'asc')
 		->get();
 
-		$vista=view('pdfHistorial', compact('pacientes', 'consulta'));
+		$vista=view('pdfPago', compact('pacientes', 'consulta'));
 		$dompdf=\App::make('dompdf.wrapper');
 		$dompdf->loadHTML($vista);
 		return $dompdf->stream();

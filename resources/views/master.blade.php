@@ -64,7 +64,8 @@
         <button type="submit" class="btn btn-default">Buscar</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="{{url('auth/login')}}">Login</a></li>
+        <li><a href="{{url('/login')}}">Login</a></li>
+         <li><a href="{{url('/register')}}">Registrarse</a></li>
       </ul>
     </div>
   </div>

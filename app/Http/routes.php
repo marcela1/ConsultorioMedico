@@ -74,3 +74,7 @@ Route::get('/pdfPago/{id}','pdfController@pdfPago');
 
 
 
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
