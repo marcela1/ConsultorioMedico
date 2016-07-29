@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+		<p align="left"><img src="imagenes/receta.png" WIDTH=700 HEIGHT=150 ></p>	
 	<title>Lista de Receta</title>
 </head>
 <body>
@@ -38,6 +39,32 @@
 	@else
 		<h2>No hay receta</h2>
 	@endif
+	    <br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<center>
+	<br><h12>___________________________</h12>
+	<br><h12>Firma de medico</h12>
 		
 
 </body>

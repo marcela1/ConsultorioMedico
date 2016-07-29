@@ -1,26 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<p align="left"><img src="imagenes/receta.png" WIDTH=700 HEIGHT=150 ></p>	
-	<h2 ><font color="#1364BB"><b>CONSULTORIO MEDICO</b></font></h2>
 
 	<p align="center"><img src="imagenes/historial.jpg" WIDTH=800 HEIGHT=150 ></p>
 	<div class="jumbotron">
-		<h2 align="center"><font color="#1364BB"><b>CONSULTORIO MEDICO</b></font></h2>
-	</div>
-	<meta charset="UTF-8">
-	<title>Informacion del Usuario</title>
 
 
 </head>
 <body>
-	<h1>Informacion del Usuario </h1>
+	<h2 ><font color="#1364BB"><b>Informacion del Usuario</b> </h2>
 
-	
+	<b>
 	<hr>	
 	
-	<table >
-		<tr>
+<table width="100%"  border="1" cellspacing="0" cellpadding="0" valign="middle">
+		<tr class="success">
+
 			<td>ID</td>
 			<td>Nombre</td>
 			<td>Fecha de Consulta</td>
@@ -28,7 +23,7 @@
 			<td>Enfermedad</td>
 			<td>Tratamiento</td>
 			<td>Doctor</td>
-			
+		
 		</tr>
 	
 	
@@ -43,6 +38,7 @@
 				<td>{{$h->doc }} {{$h->ap}} {{$h->am}}</td>
 							
 		</tr>
+	</table>	
 		@endforeach 
 		
 		
