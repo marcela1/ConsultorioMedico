@@ -28,7 +28,7 @@
 					<div class="form-group, col-xs-12">
 						<label for="Nombre"><b>Paciente:</b></label>						
 					<select class="form-control" name="Nombre" id="">
-								<option value=""><font color="White">{{$consulta->nombre}}</font></option>
+								<option value="{{$consulta->id_paciente}}"><font color="White">{{$consulta->nombre}}</font></option>
 								@foreach($pacientes as $p)
 								<option value="{{$p->id}}">{{$p->nombre}}</option>
 								@endforeach
@@ -36,7 +36,9 @@
 					</div>
 					<div class="form-group, col-xs-12">
 						<label for="Doctor"><b>Doctor:</b></label>
-						<input value="{{$consulta->doc}}" type="text" class="form-control" name="Doctor">		
+						
+						<select class="form-control" name="Doctor">
+							<option value="{{$consulta->id_administrador}}">{{$consulta->doc}}</option></select>		
 					</div>
 		</div>
 	</div>

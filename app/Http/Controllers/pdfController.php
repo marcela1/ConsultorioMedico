@@ -36,4 +36,26 @@ class pdfController extends Controller
 		return $dompdf->stream();
 	
 	}
+
+	public function pdfHistorial($id){
+	$pacientes=Paciente::all();
+	$consulta=Consulta::all();
+
+	$consulta=DB::table('consulta')
+		//$paciente=Paciente::find($id);
+		->join('administradores', 'consulta.id_administrador' ,'=' , 'administradores.id')
+		->join('pacientes', 'consulta.id_paciente', '=', 'pacientes.id')
+		->select('consulta.id','pacientes.nombre as np','consulta.fecha','consulta.hora', 'consulta.diagnostico','consulta.tratamiento','administradores.nombre as doc', 
+			'administradores.apellido_paterno as ap','administradores.apellido_materno as am')
+		->where('id_paciente', '=', $id)
+		->orderBy('consulta.fecha', 'asc')
+		->orderBy('consulta.hora', 'asc')
+		->get();
+
+		$vista=view('pdfHistorial', compact('pacientes', 'consulta'));
+		$dompdf=\App::make('dompdf.wrapper');
+		$dompdf->loadHTML($vista);
+		return $dompdf->stream();
+	
+	}
 }

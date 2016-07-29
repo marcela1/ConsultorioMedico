@@ -70,4 +70,7 @@ Route::post('/actualizarPago/{id}','pagoController@actualizarPago');
 
 
 Route::get('/pdfHistorial/{id}','pdfController@pdfHistorial');
+Route::get('/pdfPago/{id}','pdfController@pdfPago');
+
+
 

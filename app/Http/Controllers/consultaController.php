@@ -38,7 +38,7 @@ class consultaController extends Controller
 		->where('c.id','=',$id)
 		->join('pacientes as p' , 'c.id_paciente' , '=' , 'p.id')
 		->join('administradores as a', 'c.id_administrador' ,'=' , 'a.id')
-		->select('c.id','p.nombre','a.nombre as doc','c.fecha','c.hora','c.peso','c.altura','c.IMC','c.temperatura_corporal','c.presion','c.frecuencia_respiratoria','c.frecuencia_cardiaca','c.antecedentes_familiares','c.padecimientos','c.clasificacion','c.diagnostico','c.tratamiento')
+		->select('c.id','c.id_paciente','c.id_administrador','p.nombre','a.nombre as doc','c.fecha','c.hora','c.peso','c.altura','c.IMC','c.temperatura_corporal','c.presion','c.frecuencia_respiratoria','c.frecuencia_cardiaca','c.antecedentes_familiares','c.padecimientos','c.clasificacion','c.diagnostico','c.tratamiento')
 		->first();
 		return view('modificarConsulta', compact('consulta','pacientes'));
 	}
