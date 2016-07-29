@@ -11,8 +11,10 @@
 					<input type="hidden" name="_token" value="{{csrf_token() }}">
 					
 					<div class="form-group">
-						<label for="">Pacientes</label>
+						<h3><label for=""><font color="#2878C2" face="verdana"><b>Pacientes:</b></font></label></h3>
 						<select class="form-control"name="pacientes" id="">
+						<option value=""><font color="White">Seleccione Un Paciente</font></option>
+
 							@foreach($pacientes as $p)
 							<option value="{{$p->id}}">{{$p->nombre}}</option>
 							@endforeach

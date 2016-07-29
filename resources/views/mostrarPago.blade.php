@@ -2,7 +2,7 @@
 @section('encabezado')
 <div class="jumbotron" style="background: #2878C2;height:150px;">
 
-<h1><img src="imagenes/100.png" width="100" height="80" ALIGN="left"><font color="White" face="verdana">Pagos Registrados</font></h1>
+<h1><img src="imagenes/p.png" width="85" height="75" ALIGN="left"><font color="White" face="verdana">Pagos Realizados</font></h1>
 </div>
 @stop
 @section('contenido')
