@@ -28,7 +28,7 @@ Route::get('/modificarCita/{id}','citaController@modificarCita');
 Route::post('/actualizarCita/{id}','citaController@actualizarCita');
 
 Route::get('/ ', function () {
-    return view('master2');
+    return view('principal2');
 });
 
 Route::get('/principal ', function () {
