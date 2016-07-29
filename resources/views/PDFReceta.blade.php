@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-		<p align="left"><img src="imagenes/receta.png" WIDTH=700 HEIGHT=150 ></p>	
+		<p align="left"><img src="imagenes/receta.png" WIDTH=700 HEIGHT=150 ></p><br>	
+
+
 	<title>Lista de Receta</title>
 </head>
 <body>
-	<h1>Receta</h1>
+	<h2 ><font color="#1F0A96"><b>Receta Médica</b> </h2>
 	<h2></h2>
 	<hr>
 		@if($recetas != null)
@@ -62,9 +64,12 @@
 	<br>
 	<br>
 	<br>
+	<br>
+	<br>
+	<br>
 	<center>
-	<br><h12>___________________________</h12>
-	<br><h12>Firma de medico</h12>
+	<br><h12><font color="#1F0A96">___________________________</h12>
+	<br><h12><font color="#1F0A96"><b>Dra. Ruth Nereyd Ceballos Vega</b></h12>
 		
 
 </body>
