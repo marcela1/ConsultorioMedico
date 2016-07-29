@@ -84,7 +84,7 @@ $(function(){
 
 <div class="jumbotron" style="background: #86B9D1;">
   <div class="ex1" >
-<h1 <p class="text-primary"><font color="White" face="verdana" >Mision </font></p></h1>
+<h1 <p class="text-primary"><font color="White" face="verdana" >Misión </font></p></h1>
 <h7 <p  style="color: #1C81AC margin-left:30px" > <font color="White" face="verdana" >Nuestra misión como empresa de Desarrollo Web es ofrecer soluciones de Negocios que impulsen
 al cliente en su incursión al mundo de la Internet, a través de un servicio de alta calidad y
 con diseño de vanguardia. </font></p></h7>
@@ -95,7 +95,7 @@ con diseño de vanguardia. </font></p></h7>
 
 <div class="form-group, col-xs-4">
 <div class="jumbotron" style="background: #86B9D1;">
-<h1 <p class="text-primary"><font color="White" face="verdana" >Vision</font></p></h1>
+<h1 <p class="text-primary"><font color="White" face="verdana" >Visión</font></p></h1>
 <h7 <p  style="color: #1C81AC margin-left:30px" > <font color="White" face="verdana" >Ser la mejor alternativa en desarrollo Web para el cliente que busca utilizar las oportunidades que internet le ofrece para impulsar su negocio, donde nuestra calidad refleje suna excelente relación con nuestros Clientes.</font></p></h7>
 </div>
 </div>
