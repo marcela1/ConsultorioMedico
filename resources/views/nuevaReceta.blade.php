@@ -58,7 +58,7 @@
 	 </div>
 						
 					<div class="col-xs-12">
-					<a href="{{url('/')}}" class="btn btn-info">Imprimir Receta</a>
+					
 					<input type="submit" class="btn btn-primary">
 					<a href="{{url('/')}}" class="btn btn-danger">Cancelar</a>
 					</div>

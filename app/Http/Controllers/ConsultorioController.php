@@ -176,15 +176,16 @@ class ConsultorioController extends Controller
     }
 
      public function PDFReceta($id){
-      $lista=DB::table('consulta_receta')->where('id_consulta','=',$id)->lists('id_receta');
-      $recetas=DB::table('receta')
-          ->whereIn('id', $lista)
-          ->orderBy('id','asc')
-          ->get();
+      $pacientes=Paciente::all();
+    $recetas=DB::table('receta as r')
+    ->join('administradores as a', 'r.id_administrador' ,'=' , 'a.id')
+    ->join('pacientes as p', 'r.id_paciente', '=', 'p.id')
+    ->select('r.id','p.nombre','r.peso','r.fecha','r.hora','r.tratamiento','a.nombre as doc')
+    ->where('id_paciente', '=', $id)
+    ->orderBy('r.id', 'asc')
+    ->get();
 
-      $consultas= Consulta::find($id);
-
-      $vista=view('PDFReceta', compact('recetas','consultas'));
+      $vista=view('PDFReceta', compact('recetas','pacientes'));
       $dompdf=\App::make('dompdf.wrapper');
       $dompdf->loadHTML($vista);
       return $dompdf->stream();

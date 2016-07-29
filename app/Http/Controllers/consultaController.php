@@ -13,18 +13,19 @@ use App\Consulta;
 class consultaController extends Controller
 {
     public function mostrarConsulta(){
+    	$pacientes = Paciente::all();
 		$consulta=DB::table('consulta')
 		->join('pacientes' , 'consulta.id_paciente' , '=' , 'pacientes.id')
 		->join('administradores', 'consulta.id_administrador' ,'=' , 'administradores.id')
-		->select('consulta.id','pacientes.nombre','pacientes.apellido_paterno','pacientes.apellido_materno','administradores.nombre as doc', 
+		->select('consulta.id','consulta.id_paciente','pacientes.nombre','pacientes.apellido_paterno','pacientes.apellido_materno','administradores.nombre as doc', 
 			'administradores.apellido_paterno as ap','administradores.apellido_materno as am','consulta.fecha','consulta.hora')
 		->orderBy('consulta.fecha', 'asc')
 		->orderBy( 'consulta.hora', 'asc')
 		->get();
-	
+		
 		//traer la informacion de la tabla
 		//dd($usuarios);
-		return view('/mostrarConsulta', compact('consulta' ));
+		return view('/mostrarConsulta', compact('pacientes','consulta'));
 	}
 	public function eliminarConsulta($id){
 		//dd($id);

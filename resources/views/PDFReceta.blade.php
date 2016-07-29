@@ -8,7 +8,7 @@
 	<h1>Receta</h1>
 	<h2></h2>
 	<hr>
-		@if($recetas!=null)
+		@if($recetas != null)
 	<table>
 		<tr>
 			<td>Paciente</td>
@@ -22,8 +22,8 @@
 	
 		@foreach($recetas as $r)
 		<tr>
-			<td>{{$r->id_paciente}}</td>
-			<td>{{$r->id_administrador}}</td>
+			<td>{{$r->nombre}}</td>
+			<td>{{$r->doc}}</td>
 			<td>{{$r->fecha}}</td>
 			<td>{{$r->hora}}</td>
 			<td>{{$r->peso}}</td>

@@ -45,7 +45,7 @@
 						<input type="text" class="form-control" name="Doctor" value="{{$consulta->id_administrador}}" style="visibility:hidden">
    
 					<div class="col-xs-12">
-					<a href="{{url('/')}}" class="btn btn-info">Imprimir Receta</a>
+					
 					<input type="submit" class="btn btn-primary">
 					<a href="{{url('/')}}" class="btn btn-danger">Cancelar</a>
 					</div>
