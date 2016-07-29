@@ -28,9 +28,12 @@ Route::get('/modificarCita/{id}','citaController@modificarCita');
 Route::post('/actualizarCita/{id}','citaController@actualizarCita');
 
 Route::get('/ ', function () {
-    return view('principal');
+    return view('master2');
 });
 
+Route::get('/principal ', function () {
+    return view('principal');
+});
 
 Route::get('/consultarPacientes','ConsultorioController@consultarPacientes');
 Route::get('/registrarPaciente', 'ConsultorioController@registrarPaciente');
