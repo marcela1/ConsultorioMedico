@@ -33,7 +33,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="{{url('/')}}"><img src="{{asset("imagenes/s.gif")}}" width="40" height="30" ALIGN="left">Consultorio Medico</a>
+      <a class="navbar-brand" href="{{url('/principal')}}"><img src="{{asset("imagenes/s.gif")}}" width="40" height="30" ALIGN="left">Consultorio Medico</a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
