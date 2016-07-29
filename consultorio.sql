@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-07-2016 a las 20:14:30
+-- Tiempo de generación: 29-07-2016 a las 20:45:17
 -- Versión del servidor: 10.1.13-MariaDB
 -- Versión de PHP: 7.0.6
 
@@ -165,25 +165,6 @@ CREATE TABLE `historial` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `migrations`
---
-
-CREATE TABLE `migrations` (
-  `migration` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `batch` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Volcado de datos para la tabla `migrations`
---
-
-INSERT INTO `migrations` (`migration`, `batch`) VALUES
-('2014_10_12_000000_create_users_table', 1),
-('2014_10_12_100000_create_password_resets_table', 1);
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `pacientes`
 --
 
@@ -251,18 +232,6 @@ INSERT INTO `pago` (`id`, `id_paciente`, `id_administrador`, `hora`, `fecha`, `p
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `password_resets`
---
-
-CREATE TABLE `password_resets` (
-  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `token` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `receta`
 --
 
@@ -287,29 +256,6 @@ INSERT INTO `receta` (`id`, `id_paciente`, `id_administrador`, `fecha`, `hora`, 
 (4, 2, 1, '2016-07-21', '11:46', '80', 'abaa', '2016-07-21 22:54:27', '2016-07-21 22:54:27'),
 (6, 2, 3, '2016-07-27', '11:46', '80', 'Paracetamol', '2016-07-28 10:17:29', '2016-07-28 10:17:29'),
 (7, 2, 3, '2016-07-28', '9:24', '80', 'Paracetamol', '2016-07-29 09:24:40', '2016-07-29 09:24:40');
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `users`
---
-
-CREATE TABLE `users` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `remember_token` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Volcado de datos para la tabla `users`
---
-
-INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Jesus', 'dany_aispuro@hotmail.com', '$2y$10$dF2EaGb3Asf6p8cpcv7/S.I653ReFauAdBZvxMknSPaSB7.3QbGT2', 'Y7dmIVxup0YlMomkrGe8VS4SoemlkkAtJGVedr07STB9sf1xMh25XqBOt28U', '2016-07-29 11:10:43', '2016-07-29 23:38:21');
 
 --
 -- Índices para tablas volcadas
@@ -376,26 +322,12 @@ ALTER TABLE `pago`
   ADD KEY `id_administrador` (`id_administrador`);
 
 --
--- Indices de la tabla `password_resets`
---
-ALTER TABLE `password_resets`
-  ADD KEY `password_resets_email_index` (`email`),
-  ADD KEY `password_resets_token_index` (`token`);
-
---
 -- Indices de la tabla `receta`
 --
 ALTER TABLE `receta`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id_paciente` (`id_paciente`),
   ADD KEY `id_administrador` (`id_administrador`);
-
---
--- Indices de la tabla `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `users_email_unique` (`email`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -436,11 +368,6 @@ ALTER TABLE `pago`
 --
 ALTER TABLE `receta`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
---
--- AUTO_INCREMENT de la tabla `users`
---
-ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- Restricciones para tablas volcadas
 --
