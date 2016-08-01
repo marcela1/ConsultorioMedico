@@ -33,7 +33,7 @@ class administradorController extends Controller
 
 
 		$administrador->save();
-		return Redirect('/');
+		return Redirect('/principal');
 		//dd($nombre. " ".$edad. " ".$correo);
 
 	}
